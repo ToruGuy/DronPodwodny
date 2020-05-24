@@ -1,0 +1,98 @@
+\hypertarget{namespace_pz_g}{}\section{Dokumentacja przestrzeni nazw PzG}
+\label{namespace_pz_g}\index{PzG@{PzG}}
+
+
+Moduł narzędzi umożliwiających połącznie z G\+N\+U\+Plotem.  
+
+
+\subsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_pz_g_1_1_info_pliku_do_rysowania}{Info\+Pliku\+Do\+Rysowania}}
+\begin{DoxyCompactList}\small\item\em Zestaw informacji dotyczący pliku i sposobu rysowania. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Lacze\+Do\+G\+N\+U\+Plota}}
+\begin{DoxyCompactList}\small\item\em Klasa realizuje interfejs do programu G\+N\+U\+Plot. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Wyliczenia}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace_pz_g_aeedae1ef10c66d720f9e89de408ca4ca}{Tryb\+Rysowania}} \{ \mbox{\hyperlink{namespace_pz_g_aeedae1ef10c66d720f9e89de408ca4caa5eb0cf8b3405e136f092efdb489d60c4}{T\+R\+\_\+2D}}, 
+\mbox{\hyperlink{namespace_pz_g_aeedae1ef10c66d720f9e89de408ca4caa856e6b0fa6b8a9dc184c60cf27dcc5d2}{T\+R\+\_\+3D}}
+ \}
+\begin{DoxyCompactList}\small\item\em Określa tryb rysowania realizowanego przez program {\ttfamily gnuplot}. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_pz_g_a705c92106f39b7d0c34a6739d10ff0b6}{Rodzaj\+Rysowania}} \{ \mbox{\hyperlink{namespace_pz_g_a705c92106f39b7d0c34a6739d10ff0b6a927eaa159aa4bd3198f0a330b967746d}{R\+R\+\_\+\+Ciagly}}, 
+\mbox{\hyperlink{namespace_pz_g_a705c92106f39b7d0c34a6739d10ff0b6aa01097ee8266d6402b752ef6f9a4690c}{R\+R\+\_\+\+Punktowy}}
+ \}
+\begin{DoxyCompactList}\small\item\em Sposób rysowania linii. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespace_pz_g_ae1ae4d36f66c77879380ba73da8e20e3}{Czy\+Jest\+Plik}} (char const $\ast$Nazwa\+Pliku)
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Niniejsza przestrzeń nazw stanowi moduł logiczny zawierający narzędzia umożliwiające realizację połączenia z programem {\ttfamily gnuplot}. 
+
+\subsection{Dokumentacja typów wyliczanych}
+\mbox{\Hypertarget{namespace_pz_g_a705c92106f39b7d0c34a6739d10ff0b6}\label{namespace_pz_g_a705c92106f39b7d0c34a6739d10ff0b6}} 
+\index{PzG@{PzG}!RodzajRysowania@{RodzajRysowania}}
+\index{RodzajRysowania@{RodzajRysowania}!PzG@{PzG}}
+\subsubsection{\texorpdfstring{RodzajRysowania}{RodzajRysowania}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_pz_g_a705c92106f39b7d0c34a6739d10ff0b6}{Pz\+G\+::\+Rodzaj\+Rysowania}}}
+
+Określa sposób rysowania linii. \begin{DoxyEnumFields}{Wartości wyliczeń}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RR\_Ciagly@{RR\_Ciagly}!PzG@{PzG}}\index{PzG@{PzG}!RR\_Ciagly@{RR\_Ciagly}}}\mbox{\Hypertarget{namespace_pz_g_a705c92106f39b7d0c34a6739d10ff0b6a927eaa159aa4bd3198f0a330b967746d}\label{namespace_pz_g_a705c92106f39b7d0c34a6739d10ff0b6a927eaa159aa4bd3198f0a330b967746d}} 
+R\+R\+\_\+\+Ciagly&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RR\_Punktowy@{RR\_Punktowy}!PzG@{PzG}}\index{PzG@{PzG}!RR\_Punktowy@{RR\_Punktowy}}}\mbox{\Hypertarget{namespace_pz_g_a705c92106f39b7d0c34a6739d10ff0b6aa01097ee8266d6402b752ef6f9a4690c}\label{namespace_pz_g_a705c92106f39b7d0c34a6739d10ff0b6aa01097ee8266d6402b752ef6f9a4690c}} 
+R\+R\+\_\+\+Punktowy&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definicja w linii 49 pliku lacze\+\_\+do\+\_\+gnuplota.\+hh.
+
+\mbox{\Hypertarget{namespace_pz_g_aeedae1ef10c66d720f9e89de408ca4ca}\label{namespace_pz_g_aeedae1ef10c66d720f9e89de408ca4ca}} 
+\index{PzG@{PzG}!TrybRysowania@{TrybRysowania}}
+\index{TrybRysowania@{TrybRysowania}!PzG@{PzG}}
+\subsubsection{\texorpdfstring{TrybRysowania}{TrybRysowania}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_pz_g_aeedae1ef10c66d720f9e89de408ca4ca}{Pz\+G\+::\+Tryb\+Rysowania}}}
+
+Typ wyliczeniowy określające dopuszczalne tryby rysowania realizowanego przez program {\ttfamily gnuplot}. Wybór trybu wiąże się ze zmianą sposobu interpretacji danych zawartych pliku. Jeśli np. wybrany zostanie tryb 2D, to zakłada się, że w każdej linii pliku z danymi znajdują się wartości współrzędnych {\itshape x}, {\itshape y}. Wartości typu\+: \begin{DoxyItemize}
+\item {\ttfamily T\+R\+\_\+2D} -\/ rysowanie w trybie 2D, co sprowadza się do rysowania wykresów funkcji jednej zmiennej. \item {\ttfamily T\+R\+\_\+3D} -\/ rysowanie w trybie 3D. Oznacza to możliwość rysowania wykresów funkcji dwóch zmiennych. \end{DoxyItemize}
+\begin{DoxyEnumFields}{Wartości wyliczeń}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TR\_2D@{TR\_2D}!PzG@{PzG}}\index{PzG@{PzG}!TR\_2D@{TR\_2D}}}\mbox{\Hypertarget{namespace_pz_g_aeedae1ef10c66d720f9e89de408ca4caa5eb0cf8b3405e136f092efdb489d60c4}\label{namespace_pz_g_aeedae1ef10c66d720f9e89de408ca4caa5eb0cf8b3405e136f092efdb489d60c4}} 
+T\+R\+\_\+2D&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TR\_3D@{TR\_3D}!PzG@{PzG}}\index{PzG@{PzG}!TR\_3D@{TR\_3D}}}\mbox{\Hypertarget{namespace_pz_g_aeedae1ef10c66d720f9e89de408ca4caa856e6b0fa6b8a9dc184c60cf27dcc5d2}\label{namespace_pz_g_aeedae1ef10c66d720f9e89de408ca4caa856e6b0fa6b8a9dc184c60cf27dcc5d2}} 
+T\+R\+\_\+3D&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definicja w linii 43 pliku lacze\+\_\+do\+\_\+gnuplota.\+hh.
+
+
+
+\subsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{namespace_pz_g_ae1ae4d36f66c77879380ba73da8e20e3}\label{namespace_pz_g_ae1ae4d36f66c77879380ba73da8e20e3}} 
+\index{PzG@{PzG}!CzyJestPlik@{CzyJestPlik}}
+\index{CzyJestPlik@{CzyJestPlik}!PzG@{PzG}}
+\subsubsection{\texorpdfstring{CzyJestPlik()}{CzyJestPlik()}}
+{\footnotesize\ttfamily bool Pz\+G\+::\+Czy\+Jest\+Plik (\begin{DoxyParamCaption}\item[{char const $\ast$}]{Nazwa\+Pliku }\end{DoxyParamCaption})}
+
+
+
+Definicja w linii 85 pliku lacze\+\_\+do\+\_\+gnuplota.\+cpp.
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_pz_g_ae1ae4d36f66c77879380ba73da8e20e3_icgraph}
+\end{center}
+\end{figure}

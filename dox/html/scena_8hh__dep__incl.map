@@ -1,0 +1,7 @@
+<map id="scena.hh" name="scena.hh">
+<area shape="rect" id="node1" title=" " alt="" coords="115,5,195,32"/>
+<area shape="rect" id="node2" href="$menu_8hh.html" title=" " alt="" coords="62,80,141,107"/>
+<area shape="rect" id="node5" href="$scena_8cpp.html" title=" " alt="" coords="165,80,251,107"/>
+<area shape="rect" id="node3" href="$main_8cpp.html" title=" " alt="" coords="5,155,88,181"/>
+<area shape="rect" id="node4" href="$menu_8cpp.html" title=" " alt="" coords="113,155,199,181"/>
+</map>

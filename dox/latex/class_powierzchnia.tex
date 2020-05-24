@@ -1,0 +1,138 @@
+\hypertarget{class_powierzchnia}{}\section{Dokumentacja klasy Powierzchnia}
+\label{class_powierzchnia}\index{Powierzchnia@{Powierzchnia}}
+
+
+{\ttfamily \#include $<$powierzchnia.\+hh$>$}
+
+
+
+Diagram dziedziczenia dla Powierzchnia\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{class_powierzchnia__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_wektor3_d}{Wektor3D}} \mbox{\hyperlink{class_powierzchnia_ad6359705945ff2b275950f918d34a49e}{operator\mbox{[}$\,$\mbox{]}}} (unsigned int i) const
+\item 
+\mbox{\hyperlink{class_wektor3_d}{Wektor3D}} \& \mbox{\hyperlink{class_powierzchnia_a65630dfdb8e9601a04d186a74adff189}{operator\mbox{[}$\,$\mbox{]}}} (unsigned int i)
+\item 
+int \mbox{\hyperlink{class_powierzchnia_aaccea9358f37f18de45e0afddd84c93d}{ilosc}} () const
+\item 
+std\+::string \mbox{\hyperlink{class_powierzchnia_ab6ff9b19f96772931a2861fde2f14ade}{napis}} () const
+\end{DoxyCompactItemize}
+\subsection*{Atrybuty chronione}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_wektor3_d}{Wektor3D}} $>$ \mbox{\hyperlink{class_powierzchnia_aab8cbab789010fa80e3b9c7d27669951}{\+\_\+wierzcholki}}
+\item 
+std\+::string \mbox{\hyperlink{class_powierzchnia_a6bedeffe3d73b7b54c4b1d33dc81b83a}{\+\_\+napis}} = \char`\"{}\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Plik zawiera definicje klasy \mbox{\hyperlink{class_powierzchnia}{Powierzchnia}}. Jest to najmniejszy element graficzny. 
+
+Definicja w linii 12 pliku powierzchnia.\+hh.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_powierzchnia_aaccea9358f37f18de45e0afddd84c93d}\label{class_powierzchnia_aaccea9358f37f18de45e0afddd84c93d}} 
+\index{Powierzchnia@{Powierzchnia}!ilosc@{ilosc}}
+\index{ilosc@{ilosc}!Powierzchnia@{Powierzchnia}}
+\subsubsection{\texorpdfstring{ilosc()}{ilosc()}}
+{\footnotesize\ttfamily int Powierzchnia\+::ilosc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Funkcja zwraca ilosc utworzonych wierzcholkow.
+
+\begin{DoxyReturn}{Zwraca}
+int 
+\end{DoxyReturn}
+
+
+Definicja w linii 43 pliku powierzchnia.\+hh.
+
+\mbox{\Hypertarget{class_powierzchnia_ab6ff9b19f96772931a2861fde2f14ade}\label{class_powierzchnia_ab6ff9b19f96772931a2861fde2f14ade}} 
+\index{Powierzchnia@{Powierzchnia}!napis@{napis}}
+\index{napis@{napis}!Powierzchnia@{Powierzchnia}}
+\subsubsection{\texorpdfstring{napis()}{napis()}}
+{\footnotesize\ttfamily std\+::string Powierzchnia\+::napis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Pozwala odczytac pole napis.
+
+\begin{DoxyReturn}{Zwraca}
+std\+::string 
+\end{DoxyReturn}
+
+
+Definicja w linii 50 pliku powierzchnia.\+hh.
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{class_powierzchnia_ab6ff9b19f96772931a2861fde2f14ade_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_powierzchnia_ad6359705945ff2b275950f918d34a49e}\label{class_powierzchnia_ad6359705945ff2b275950f918d34a49e}} 
+\index{Powierzchnia@{Powierzchnia}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Powierzchnia@{Powierzchnia}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_wektor3_d}{Wektor3D}} Powierzchnia\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{unsigned int}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Przeciazenie operatora \mbox{[}\mbox{]}, udostepniajace odczytanie pola wierzcholki.
+
+\begin{DoxyReturn}{Zwraca}
+\mbox{\hyperlink{class_wektor3_d}{Wektor3D}} 
+\end{DoxyReturn}
+
+
+Definicja w linii 29 pliku powierzchnia.\+hh.
+
+\mbox{\Hypertarget{class_powierzchnia_a65630dfdb8e9601a04d186a74adff189}\label{class_powierzchnia_a65630dfdb8e9601a04d186a74adff189}} 
+\index{Powierzchnia@{Powierzchnia}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Powierzchnia@{Powierzchnia}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_wektor3_d}{Wektor3D}}\& Powierzchnia\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{unsigned int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Przeciazenie operatora \mbox{[}\mbox{]}, udostepniajace zmiane pola wierzcholki.
+
+\begin{DoxyReturn}{Zwraca}
+\mbox{\hyperlink{class_wektor3_d}{Wektor3D}} 
+\end{DoxyReturn}
+
+
+Definicja w linii 36 pliku powierzchnia.\+hh.
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\mbox{\Hypertarget{class_powierzchnia_a6bedeffe3d73b7b54c4b1d33dc81b83a}\label{class_powierzchnia_a6bedeffe3d73b7b54c4b1d33dc81b83a}} 
+\index{Powierzchnia@{Powierzchnia}!\_napis@{\_napis}}
+\index{\_napis@{\_napis}!Powierzchnia@{Powierzchnia}}
+\subsubsection{\texorpdfstring{\_napis}{\_napis}}
+{\footnotesize\ttfamily std\+::string Powierzchnia\+::\+\_\+napis = \char`\"{}\char`\"{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+Pole wierzcholki, zawiera dane o wierzcholkach powierzchni w formie gotowej do wypisania. 
+
+Definicja w linii 21 pliku powierzchnia.\+hh.
+
+\mbox{\Hypertarget{class_powierzchnia_aab8cbab789010fa80e3b9c7d27669951}\label{class_powierzchnia_aab8cbab789010fa80e3b9c7d27669951}} 
+\index{Powierzchnia@{Powierzchnia}!\_wierzcholki@{\_wierzcholki}}
+\index{\_wierzcholki@{\_wierzcholki}!Powierzchnia@{Powierzchnia}}
+\subsubsection{\texorpdfstring{\_wierzcholki}{\_wierzcholki}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_wektor3_d}{Wektor3D}}$>$ Powierzchnia\+::\+\_\+wierzcholki\hspace{0.3cm}{\ttfamily [protected]}}
+
+Pole wierzcholki, zawiera dane o wierzcholkach powierzchni. 
+
+Definicja w linii 17 pliku powierzchnia.\+hh.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{powierzchnia_8hh}{powierzchnia.\+hh}}\end{DoxyCompactItemize}

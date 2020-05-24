@@ -1,0 +1,231 @@
+\hypertarget{class_wektor}{}\section{Dokumentacja szablonu klasy Wektor$<$ S\+Typ, S\+Wymiar $>$}
+\label{class_wektor}\index{Wektor$<$ STyp, SWymiar $>$@{Wektor$<$ STyp, SWymiar $>$}}
+
+
+{\ttfamily \#include $<$wektor.\+hh$>$}
+
+
+
+Diagram współpracy dla Wektor$<$ S\+Typ, S\+Wymiar $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{class_wektor__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_wektor_aa8478acaedd4ab9cb23dc803d779e19c}{Wektor}} ()
+\item 
+S\+Typ \mbox{\hyperlink{class_wektor_adc3d97e60e0488778b4b9af711c0fff9}{operator()}} (unsigned int i) const
+\item 
+S\+Typ \& \mbox{\hyperlink{class_wektor_a38743f00d800acff23b24447fecede37}{operator()}} (unsigned int i)
+\item 
+\mbox{\hyperlink{class_wektor}{Wektor}}$<$ S\+Typ, S\+Wymiar $>$ \mbox{\hyperlink{class_wektor_a08bbabfe97cf0699429571b6eed21ed8}{operator+}} (const \mbox{\hyperlink{class_wektor}{Wektor}}$<$ S\+Typ, S\+Wymiar $>$ \&wek) const
+\item 
+\mbox{\hyperlink{class_wektor}{Wektor}}$<$ S\+Typ, S\+Wymiar $>$ \mbox{\hyperlink{class_wektor_a1560f385977f9b4ee942347e511cbd03}{operator-\/}} (const \mbox{\hyperlink{class_wektor}{Wektor}}$<$ S\+Typ, S\+Wymiar $>$ \&odjemnik) const
+\item 
+\mbox{\hyperlink{class_wektor}{Wektor}}$<$ S\+Typ, S\+Wymiar $>$ \mbox{\hyperlink{class_wektor_a9810ff81924a1da75158b32c097fb329}{operator$\ast$}} (S\+Typ mnoznik) const
+\item 
+S\+Typ \mbox{\hyperlink{class_wektor_a80cfd984612acba04ac3daa26549ca64}{operator$\ast$}} (const \mbox{\hyperlink{class_wektor}{Wektor}}$<$ S\+Typ, S\+Wymiar $>$ \&wek) const
+\item 
+\mbox{\hyperlink{class_wektor}{Wektor}}$<$ S\+Typ, S\+Wymiar $>$ \mbox{\hyperlink{class_wektor_a76e4de69098c509ae0da392c218b9270}{operator/}} (S\+Typ const \&dzielnik) const
+\item 
+{\footnotesize template$<$typename T\+MP  = S\+Typ$>$ }\\std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ T\+MP, double $>$\+::value, double $>$\+::type \mbox{\hyperlink{class_wektor_a8bdafe74616e16b690feee6844423d50}{dlugosc\+Wektora}} ()
+\end{DoxyCompactItemize}
+\subsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+S\+Typ \mbox{\hyperlink{class_wektor_a3ee1d2902419ae77e615280d7a62161b}{\+\_\+wsp}} \mbox{[}S\+Wymiar\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+\subsubsection*{template$<$typename S\+Typ, int S\+Wymiar$>$\newline
+class Wektor$<$ S\+Typ, S\+Wymiar $>$}
+
+
+
+Definicja w linii 11 pliku wektor.\+hh.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\mbox{\Hypertarget{class_wektor_aa8478acaedd4ab9cb23dc803d779e19c}\label{class_wektor_aa8478acaedd4ab9cb23dc803d779e19c}} 
+\index{Wektor$<$ STyp, SWymiar $>$@{Wektor$<$ STyp, SWymiar $>$}!Wektor@{Wektor}}
+\index{Wektor@{Wektor}!Wektor$<$ STyp, SWymiar $>$@{Wektor$<$ STyp, SWymiar $>$}}
+\subsubsection{\texorpdfstring{Wektor()}{Wektor()}}
+{\footnotesize\ttfamily template$<$typename S\+Typ, int S\+Wymiar$>$ \\
+\mbox{\hyperlink{class_wektor}{Wektor}}$<$ S\+Typ, S\+Wymiar $>$\+::\mbox{\hyperlink{class_wektor}{Wektor}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definicja w linii 14 pliku wektor.\+hh.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_wektor_a8bdafe74616e16b690feee6844423d50}\label{class_wektor_a8bdafe74616e16b690feee6844423d50}} 
+\index{Wektor$<$ STyp, SWymiar $>$@{Wektor$<$ STyp, SWymiar $>$}!dlugoscWektora@{dlugoscWektora}}
+\index{dlugoscWektora@{dlugoscWektora}!Wektor$<$ STyp, SWymiar $>$@{Wektor$<$ STyp, SWymiar $>$}}
+\subsubsection{\texorpdfstring{dlugoscWektora()}{dlugoscWektora()}}
+{\footnotesize\ttfamily template$<$typename S\+Typ, int S\+Wymiar$>$ \\
+template$<$typename T\+MP  = S\+Typ$>$ \\
+std\+::enable\+\_\+if$<$std\+::is\+\_\+same$<$T\+MP, double$>$\+::value, double$>$\+::type \mbox{\hyperlink{class_wektor}{Wektor}}$<$ S\+Typ, S\+Wymiar $>$\+::dlugosc\+Wektora (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Metoda oblicza dlugosc wektora bledu dla double.
+
+\begin{DoxyReturn}{Zwraca}
+T\+YP -\/ dlugosc wektora bledu. 
+\end{DoxyReturn}
+
+
+Definicja w linii 71 pliku wektor.\+hh.
+
+\mbox{\Hypertarget{class_wektor_adc3d97e60e0488778b4b9af711c0fff9}\label{class_wektor_adc3d97e60e0488778b4b9af711c0fff9}} 
+\index{Wektor$<$ STyp, SWymiar $>$@{Wektor$<$ STyp, SWymiar $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!Wektor$<$ STyp, SWymiar $>$@{Wektor$<$ STyp, SWymiar $>$}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename S\+Typ, int S\+Wymiar$>$ \\
+S\+Typ \mbox{\hyperlink{class_wektor}{Wektor}}$<$ S\+Typ, S\+Wymiar $>$\+::operator() (\begin{DoxyParamCaption}\item[{unsigned int}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definicja w linii 16 pliku wektor.\+hh.
+
+\mbox{\Hypertarget{class_wektor_a38743f00d800acff23b24447fecede37}\label{class_wektor_a38743f00d800acff23b24447fecede37}} 
+\index{Wektor$<$ STyp, SWymiar $>$@{Wektor$<$ STyp, SWymiar $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!Wektor$<$ STyp, SWymiar $>$@{Wektor$<$ STyp, SWymiar $>$}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename S\+Typ, int S\+Wymiar$>$ \\
+S\+Typ\& \mbox{\hyperlink{class_wektor}{Wektor}}$<$ S\+Typ, S\+Wymiar $>$\+::operator() (\begin{DoxyParamCaption}\item[{unsigned int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definicja w linii 17 pliku wektor.\+hh.
+
+\mbox{\Hypertarget{class_wektor_a9810ff81924a1da75158b32c097fb329}\label{class_wektor_a9810ff81924a1da75158b32c097fb329}} 
+\index{Wektor$<$ STyp, SWymiar $>$@{Wektor$<$ STyp, SWymiar $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Wektor$<$ STyp, SWymiar $>$@{Wektor$<$ STyp, SWymiar $>$}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename S\+Typ, int S\+Wymiar$>$ \\
+\mbox{\hyperlink{class_wektor}{Wektor}}$<$ S\+Typ, S\+Wymiar $>$ \mbox{\hyperlink{class_wektor}{Wektor}}$<$ S\+Typ, S\+Wymiar $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{S\+Typ}]{mnoznik }\end{DoxyParamCaption}) const}
+
+Przeciążenie operatora mnożenia pozwalające na mnozenie wektora przez liczbe.
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in}}  & {\em mnoznik-\/} & liczba przez ktora ma zostac pomnozony wektor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+wektor 
+\end{DoxyReturn}
+
+
+Definicja w linii 125 pliku wektor.\+hh.
+
+\mbox{\Hypertarget{class_wektor_a80cfd984612acba04ac3daa26549ca64}\label{class_wektor_a80cfd984612acba04ac3daa26549ca64}} 
+\index{Wektor$<$ STyp, SWymiar $>$@{Wektor$<$ STyp, SWymiar $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Wektor$<$ STyp, SWymiar $>$@{Wektor$<$ STyp, SWymiar $>$}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename S\+Typ, int S\+Wymiar$>$ \\
+S\+Typ \mbox{\hyperlink{class_wektor}{Wektor}}$<$ S\+Typ, S\+Wymiar $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_wektor}{Wektor}}$<$ S\+Typ, S\+Wymiar $>$ \&}]{wek }\end{DoxyParamCaption}) const}
+
+Przeciążenie operatora mnożenia pozwalające na mnozenie wektora przez wektor. Jest to mnozenie sklarne.
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in}}  & {\em \mbox{\hyperlink{class_wektor}{Wektor}}} & wek -\/ wektor który ma zostać pomnozony. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+T\+YP, wynikiem iloczynu skalarnego jest liczba. 
+\end{DoxyReturn}
+
+
+Definicja w linii 134 pliku wektor.\+hh.
+
+\mbox{\Hypertarget{class_wektor_a08bbabfe97cf0699429571b6eed21ed8}\label{class_wektor_a08bbabfe97cf0699429571b6eed21ed8}} 
+\index{Wektor$<$ STyp, SWymiar $>$@{Wektor$<$ STyp, SWymiar $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!Wektor$<$ STyp, SWymiar $>$@{Wektor$<$ STyp, SWymiar $>$}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily template$<$typename S\+Typ, int S\+Wymiar$>$ \\
+\mbox{\hyperlink{class_wektor}{Wektor}}$<$ S\+Typ, S\+Wymiar $>$ \mbox{\hyperlink{class_wektor}{Wektor}}$<$ S\+Typ, S\+Wymiar $>$\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_wektor}{Wektor}}$<$ S\+Typ, S\+Wymiar $>$ \&}]{wek }\end{DoxyParamCaption}) const}
+
+Przeciążenie operatora dodawania pozwalające na dodawanie do siebie dwóch wektorów.
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in}}  & {\em \mbox{\hyperlink{class_wektor}{Wektor}}} & wek -\/ wektor który ma zostać dodany. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+\mbox{\hyperlink{class_wektor}{Wektor}}, suma wektora z danej klasy oraz wektora wczytanego. 
+\end{DoxyReturn}
+
+
+Definicja w linii 104 pliku wektor.\+hh.
+
+\mbox{\Hypertarget{class_wektor_a1560f385977f9b4ee942347e511cbd03}\label{class_wektor_a1560f385977f9b4ee942347e511cbd03}} 
+\index{Wektor$<$ STyp, SWymiar $>$@{Wektor$<$ STyp, SWymiar $>$}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Wektor$<$ STyp, SWymiar $>$@{Wektor$<$ STyp, SWymiar $>$}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily template$<$typename S\+Typ, int S\+Wymiar$>$ \\
+\mbox{\hyperlink{class_wektor}{Wektor}}$<$ S\+Typ, S\+Wymiar $>$ \mbox{\hyperlink{class_wektor}{Wektor}}$<$ S\+Typ, S\+Wymiar $>$\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_wektor}{Wektor}}$<$ S\+Typ, S\+Wymiar $>$ \&}]{odjemnik }\end{DoxyParamCaption}) const}
+
+Przeciążenie operatora odejmowania pozwalające na odejmowanie od siebie dwóch wektorów.
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in}}  & {\em \mbox{\hyperlink{class_wektor}{Wektor}}} & wek -\/ wektor odejmujacy. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+\mbox{\hyperlink{class_wektor}{Wektor}}, roznica wektora z danej klasy oraz wektora wczytanego. 
+\end{DoxyReturn}
+
+
+Definicja w linii 115 pliku wektor.\+hh.
+
+\mbox{\Hypertarget{class_wektor_a76e4de69098c509ae0da392c218b9270}\label{class_wektor_a76e4de69098c509ae0da392c218b9270}} 
+\index{Wektor$<$ STyp, SWymiar $>$@{Wektor$<$ STyp, SWymiar $>$}!operator/@{operator/}}
+\index{operator/@{operator/}!Wektor$<$ STyp, SWymiar $>$@{Wektor$<$ STyp, SWymiar $>$}}
+\subsubsection{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily template$<$typename S\+Typ, int S\+Wymiar$>$ \\
+\mbox{\hyperlink{class_wektor}{Wektor}}$<$ S\+Typ, S\+Wymiar $>$ \mbox{\hyperlink{class_wektor}{Wektor}}$<$ S\+Typ, S\+Wymiar $>$\+::operator/ (\begin{DoxyParamCaption}\item[{S\+Typ const \&}]{dzielnik }\end{DoxyParamCaption}) const}
+
+Przeciazenie operatora dzielenia pozwalajace na dzielenie wektora przez liczbe.
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in}}  & {\em T\+YP} & dzielnik, przez ktory ma zostac podzielony wektor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+\mbox{\hyperlink{class_wektor}{Wektor}}, wynik dzielenia liczby przez wektor. 
+\end{DoxyReturn}
+
+
+Definicja w linii 143 pliku wektor.\+hh.
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\mbox{\Hypertarget{class_wektor_a3ee1d2902419ae77e615280d7a62161b}\label{class_wektor_a3ee1d2902419ae77e615280d7a62161b}} 
+\index{Wektor$<$ STyp, SWymiar $>$@{Wektor$<$ STyp, SWymiar $>$}!\_wsp@{\_wsp}}
+\index{\_wsp@{\_wsp}!Wektor$<$ STyp, SWymiar $>$@{Wektor$<$ STyp, SWymiar $>$}}
+\subsubsection{\texorpdfstring{\_wsp}{\_wsp}}
+{\footnotesize\ttfamily template$<$typename S\+Typ, int S\+Wymiar$>$ \\
+S\+Typ \mbox{\hyperlink{class_wektor}{Wektor}}$<$ S\+Typ, S\+Wymiar $>$\+::\+\_\+wsp\mbox{[}S\+Wymiar\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definicja w linii 12 pliku wektor.\+hh.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{wektor_8hh}{wektor.\+hh}}\end{DoxyCompactItemize}

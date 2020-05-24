@@ -1,0 +1,155 @@
+\hypertarget{class_scena}{}\section{Dokumentacja klasy Scena}
+\label{class_scena}\index{Scena@{Scena}}
+
+
+{\ttfamily \#include $<$scena.\+hh$>$}
+
+
+
+Diagram współpracy dla Scena\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{class_scena__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scena_a3ead38eb32ab7095a21d4e8c728531d4}{Scena}} (\mbox{\hyperlink{class_wektor3_d}{Wektor3D}} zakresP, \mbox{\hyperlink{class_wektor3_d}{Wektor3D}} zakresK)
+\item 
+\mbox{\hyperlink{class_scena_ad882b3d3c934c64c5e90a63246a47943}{$\sim$\+Scena}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_scena_ade795937f5293d5671f9e4930998fc42}{generuj\+Scene\+Do\+Pliku}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_scena_ab727dc0baa21dc3ef76f219f1d192e3f}{napis}} () const
+\end{DoxyCompactItemize}
+\subsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dno}{Dno}} $\ast$ \mbox{\hyperlink{class_scena_a166396f31572e88d87aedad307de19be}{dno}}
+\item 
+\mbox{\hyperlink{class_woda}{Woda}} $\ast$ \mbox{\hyperlink{class_scena_a031564e5e8422dc29e8dea5eff762f4d}{woda}}
+\item 
+std\+::string \mbox{\hyperlink{class_scena_a010d729b03bc1efaf244feb095e6ca80}{\+\_\+napis}} = \char`\"{}\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa laczy obiekty graficzne otaczajace drona. 
+
+Definicja w linii 12 pliku scena.\+hh.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\mbox{\Hypertarget{class_scena_a3ead38eb32ab7095a21d4e8c728531d4}\label{class_scena_a3ead38eb32ab7095a21d4e8c728531d4}} 
+\index{Scena@{Scena}!Scena@{Scena}}
+\index{Scena@{Scena}!Scena@{Scena}}
+\subsubsection{\texorpdfstring{Scena()}{Scena()}}
+{\footnotesize\ttfamily Scena\+::\+Scena (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_wektor3_d}{Wektor3D}}}]{zakresP,  }\item[{\mbox{\hyperlink{class_wektor3_d}{Wektor3D}}}]{zakresK }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Konstruktor Sceny, tworzy scene o zakresach od zakresP do zakresZ, ktore sa danymi punktami
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in}}  & {\em poczatek} & -\/ wektorowy poczatek zakresu \\
+\hline
+\mbox{\texttt{ in}}  & {\em koniec} & -\/ wektorowy koniec zakresu \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 35 pliku scena.\+hh.
+
+\mbox{\Hypertarget{class_scena_ad882b3d3c934c64c5e90a63246a47943}\label{class_scena_ad882b3d3c934c64c5e90a63246a47943}} 
+\index{Scena@{Scena}!````~Scena@{$\sim$Scena}}
+\index{````~Scena@{$\sim$Scena}!Scena@{Scena}}
+\subsubsection{\texorpdfstring{$\sim$Scena()}{~Scena()}}
+{\footnotesize\ttfamily Scena\+::$\sim$\+Scena (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Destruktor sceny 
+
+Definicja w linii 40 pliku scena.\+hh.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_scena_ade795937f5293d5671f9e4930998fc42}\label{class_scena_ade795937f5293d5671f9e4930998fc42}} 
+\index{Scena@{Scena}!generujSceneDoPliku@{generujSceneDoPliku}}
+\index{generujSceneDoPliku@{generujSceneDoPliku}!Scena@{Scena}}
+\subsubsection{\texorpdfstring{generujSceneDoPliku()}{generujSceneDoPliku()}}
+{\footnotesize\ttfamily std\+::string Scena\+::generuj\+Scene\+Do\+Pliku (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Funkcja generujuje wartosci dna oraz wody, po czym zwraca je do pliku
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in}}  & {\em nazwa\+Pliku} & \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 2 pliku scena.\+cpp.
+
+\mbox{\Hypertarget{class_scena_ab727dc0baa21dc3ef76f219f1d192e3f}\label{class_scena_ab727dc0baa21dc3ef76f219f1d192e3f}} 
+\index{Scena@{Scena}!napis@{napis}}
+\index{napis@{napis}!Scena@{Scena}}
+\subsubsection{\texorpdfstring{napis()}{napis()}}
+{\footnotesize\ttfamily std\+::string Scena\+::napis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Funkcja zwracajaca napis sceny.
+
+\begin{DoxyReturn}{Zwraca}
+string. 
+\end{DoxyReturn}
+
+
+Definicja w linii 54 pliku scena.\+hh.
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{class_scena_ab727dc0baa21dc3ef76f219f1d192e3f_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\mbox{\Hypertarget{class_scena_a010d729b03bc1efaf244feb095e6ca80}\label{class_scena_a010d729b03bc1efaf244feb095e6ca80}} 
+\index{Scena@{Scena}!\_napis@{\_napis}}
+\index{\_napis@{\_napis}!Scena@{Scena}}
+\subsubsection{\texorpdfstring{\_napis}{\_napis}}
+{\footnotesize\ttfamily std\+::string Scena\+::\+\_\+napis = \char`\"{}\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+Pole zawierajace string utworzonej sceny. 
+
+Definicja w linii 26 pliku scena.\+hh.
+
+\mbox{\Hypertarget{class_scena_a166396f31572e88d87aedad307de19be}\label{class_scena_a166396f31572e88d87aedad307de19be}} 
+\index{Scena@{Scena}!dno@{dno}}
+\index{dno@{dno}!Scena@{Scena}}
+\subsubsection{\texorpdfstring{dno}{dno}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dno}{Dno}}$\ast$ Scena\+::dno\hspace{0.3cm}{\ttfamily [private]}}
+
+Pole zawierajace wskaznik na element graficzny dna. 
+
+Definicja w linii 16 pliku scena.\+hh.
+
+\mbox{\Hypertarget{class_scena_a031564e5e8422dc29e8dea5eff762f4d}\label{class_scena_a031564e5e8422dc29e8dea5eff762f4d}} 
+\index{Scena@{Scena}!woda@{woda}}
+\index{woda@{woda}!Scena@{Scena}}
+\subsubsection{\texorpdfstring{woda}{woda}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_woda}{Woda}}$\ast$ Scena\+::woda\hspace{0.3cm}{\ttfamily [private]}}
+
+Pole zawierajace wskaznik na element graficzny wody. 
+
+Definicja w linii 21 pliku scena.\+hh.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{scena_8hh}{scena.\+hh}}\item 
+\mbox{\hyperlink{scena_8cpp}{scena.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,26 @@
+<map id="menu.hh" name="menu.hh">
+<area shape="rect" id="node1" title=" " alt="" coords="189,5,267,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,80,80,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="104,80,168,107"/>
+<area shape="rect" id="node4" href="$dron_8hh.html" title=" " alt="" coords="193,80,263,107"/>
+<area shape="rect" id="node18" href="$scena_8hh.html" title=" " alt="" coords="427,80,507,107"/>
+<area shape="rect" id="node23" href="$lacze__do__gnuplota_8hh.html" title="Zawiera definicję klasy PzG::LaczeDoGNUPlota." alt="" coords="644,80,807,107"/>
+<area shape="rect" id="node5" href="$prostopadloscian_8hh.html" title=" " alt="" coords="151,155,305,181"/>
+<area shape="rect" id="node14" href="$macierz3_d_8hh.html" title=" " alt="" coords="13,229,125,256"/>
+<area shape="rect" id="node17" title=" " alt="" coords="65,155,127,181"/>
+<area shape="rect" id="node6" title=" " alt="" coords="225,229,298,256"/>
+<area shape="rect" id="node7" href="$powierzchnia_8hh.html" title=" " alt="" coords="355,229,483,256"/>
+<area shape="rect" id="node8" title=" " alt="" coords="603,304,666,331"/>
+<area shape="rect" id="node9" href="$consts_8h.html" title=" " alt="" coords="381,304,457,331"/>
+<area shape="rect" id="node10" href="$wektor3_d_8hh.html" title=" " alt="" coords="141,304,246,331"/>
+<area shape="rect" id="node11" href="$wektor_8hh.html" title=" " alt="" coords="139,379,226,405"/>
+<area shape="rect" id="node12" title=" " alt="" coords="93,453,173,480"/>
+<area shape="rect" id="node13" title=" " alt="" coords="198,453,266,480"/>
+<area shape="rect" id="node15" href="$macierz_8hh.html" title=" " alt="" coords="22,304,117,331"/>
+<area shape="rect" id="node16" title=" " alt="" coords="35,379,104,405"/>
+<area shape="rect" id="node19" href="$woda_8hh.html" title=" " alt="" coords="380,155,457,181"/>
+<area shape="rect" id="node20" href="$dno_8hh.html" title=" " alt="" coords="481,155,548,181"/>
+<area shape="rect" id="node21" title=" " alt="" coords="663,155,721,181"/>
+<area shape="rect" id="node22" title=" " alt="" coords="573,155,638,181"/>
+<area shape="rect" id="node24" title=" " alt="" coords="796,155,839,181"/>
+</map>

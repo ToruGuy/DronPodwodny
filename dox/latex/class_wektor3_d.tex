@@ -1,0 +1,194 @@
+\hypertarget{class_wektor3_d}{}\section{Dokumentacja klasy Wektor3D}
+\label{class_wektor3_d}\index{Wektor3D@{Wektor3D}}
+
+
+{\ttfamily \#include $<$wektor3\+D.\+hh$>$}
+
+
+
+Diagram dziedziczenia dla Wektor3D\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{class_wektor3_d__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla Wektor3D\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{class_wektor3_d__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_wektor3_d_a93099f705273022e5c857dba3730d750}{ile\+Wszystkie}} () const
+\item 
+int \mbox{\hyperlink{class_wektor3_d_a35bade70d5d9200b5e4fab3e7726f4c8}{ile\+Teraz}} () const
+\item 
+\mbox{\hyperlink{class_wektor3_d_a7c48a57fd36c0af29e26c825f90a973f}{Wektor3D}} ()
+\item 
+\mbox{\hyperlink{class_wektor3_d_a2768524be9d9728b362f6bb9b42d333a}{Wektor3D}} (const \mbox{\hyperlink{class_wektor3_d}{Wektor3D}} \&w)
+\item 
+\mbox{\hyperlink{class_wektor3_d_a0defc77d38b1c9f9b1063d2b3459de5c}{Wektor3D}} (double x, double y, double z)
+\item 
+\mbox{\hyperlink{class_wektor3_d_a2214f63869d47df6ef839b4c21fc7ec5}{Wektor3D}} (const \mbox{\hyperlink{class_wektor}{Wektor}}$<$ double, 3 $>$ \&m)
+\item 
+\mbox{\hyperlink{class_wektor3_d_af82ae24a30f6c4391edd67647348ac04}{$\sim$\+Wektor3D}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_wektor3_d_ac331c1650351545bc6f765c63b60ff65}{napis}} () const
+\end{DoxyCompactItemize}
+\subsection*{Statyczne atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_wektor3_d_a2e8ba0afae88b1441e22d7788cc3a651}{ilosc\+Wszystkie}} = 0
+\item 
+static int \mbox{\hyperlink{class_wektor3_d_aceae8a0d97d25a838ec509288c5b6cc5}{ilosc\+Zniszczone}} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa dziedziczona od szablonu wektor, tworzy wektor o 3 wspolczynnikach typu double. 
+
+Definicja w linii 11 pliku wektor3\+D.\+hh.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\mbox{\Hypertarget{class_wektor3_d_a7c48a57fd36c0af29e26c825f90a973f}\label{class_wektor3_d_a7c48a57fd36c0af29e26c825f90a973f}} 
+\index{Wektor3D@{Wektor3D}!Wektor3D@{Wektor3D}}
+\index{Wektor3D@{Wektor3D}!Wektor3D@{Wektor3D}}
+\subsubsection{\texorpdfstring{Wektor3D()}{Wektor3D()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Wektor3\+D\+::\+Wektor3D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Konstruktor pustego wektora3D. 
+
+Definicja w linii 40 pliku wektor3\+D.\+hh.
+
+\mbox{\Hypertarget{class_wektor3_d_a2768524be9d9728b362f6bb9b42d333a}\label{class_wektor3_d_a2768524be9d9728b362f6bb9b42d333a}} 
+\index{Wektor3D@{Wektor3D}!Wektor3D@{Wektor3D}}
+\index{Wektor3D@{Wektor3D}!Wektor3D@{Wektor3D}}
+\subsubsection{\texorpdfstring{Wektor3D()}{Wektor3D()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Wektor3\+D\+::\+Wektor3D (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_wektor3_d}{Wektor3D}} \&}]{w }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Konstruktor kopujacy wektora3D. 
+
+Definicja w linii 45 pliku wektor3\+D.\+hh.
+
+\mbox{\Hypertarget{class_wektor3_d_a0defc77d38b1c9f9b1063d2b3459de5c}\label{class_wektor3_d_a0defc77d38b1c9f9b1063d2b3459de5c}} 
+\index{Wektor3D@{Wektor3D}!Wektor3D@{Wektor3D}}
+\index{Wektor3D@{Wektor3D}!Wektor3D@{Wektor3D}}
+\subsubsection{\texorpdfstring{Wektor3D()}{Wektor3D()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Wektor3\+D\+::\+Wektor3D (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Konstruktor parametryczny wektora3D. 
+
+Definicja w linii 50 pliku wektor3\+D.\+hh.
+
+\mbox{\Hypertarget{class_wektor3_d_a2214f63869d47df6ef839b4c21fc7ec5}\label{class_wektor3_d_a2214f63869d47df6ef839b4c21fc7ec5}} 
+\index{Wektor3D@{Wektor3D}!Wektor3D@{Wektor3D}}
+\index{Wektor3D@{Wektor3D}!Wektor3D@{Wektor3D}}
+\subsubsection{\texorpdfstring{Wektor3D()}{Wektor3D()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Wektor3\+D\+::\+Wektor3D (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_wektor}{Wektor}}$<$ double, 3 $>$ \&}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Konstruktor kopiujacy wektora3D. 
+
+Definicja w linii 55 pliku wektor3\+D.\+hh.
+
+\mbox{\Hypertarget{class_wektor3_d_af82ae24a30f6c4391edd67647348ac04}\label{class_wektor3_d_af82ae24a30f6c4391edd67647348ac04}} 
+\index{Wektor3D@{Wektor3D}!````~Wektor3D@{$\sim$Wektor3D}}
+\index{````~Wektor3D@{$\sim$Wektor3D}!Wektor3D@{Wektor3D}}
+\subsubsection{\texorpdfstring{$\sim$Wektor3D()}{~Wektor3D()}}
+{\footnotesize\ttfamily Wektor3\+D\+::$\sim$\+Wektor3D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Destruktor wektora3D. 
+
+Definicja w linii 60 pliku wektor3\+D.\+hh.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_wektor3_d_a35bade70d5d9200b5e4fab3e7726f4c8}\label{class_wektor3_d_a35bade70d5d9200b5e4fab3e7726f4c8}} 
+\index{Wektor3D@{Wektor3D}!ileTeraz@{ileTeraz}}
+\index{ileTeraz@{ileTeraz}!Wektor3D@{Wektor3D}}
+\subsubsection{\texorpdfstring{ileTeraz()}{ileTeraz()}}
+{\footnotesize\ttfamily int Wektor3\+D\+::ile\+Teraz (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Funkcja zwraca ilosc wektorow3D wyswietlonych na ekranie.
+
+\begin{DoxyReturn}{Zwraca}
+int 
+\end{DoxyReturn}
+
+
+Definicja w linii 35 pliku wektor3\+D.\+hh.
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{class_wektor3_d_a35bade70d5d9200b5e4fab3e7726f4c8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_wektor3_d_a93099f705273022e5c857dba3730d750}\label{class_wektor3_d_a93099f705273022e5c857dba3730d750}} 
+\index{Wektor3D@{Wektor3D}!ileWszystkie@{ileWszystkie}}
+\index{ileWszystkie@{ileWszystkie}!Wektor3D@{Wektor3D}}
+\subsubsection{\texorpdfstring{ileWszystkie()}{ileWszystkie()}}
+{\footnotesize\ttfamily int Wektor3\+D\+::ile\+Wszystkie (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Funkcja zwraca ilosc wszystkich utworzonych wektorow3D.
+
+\begin{DoxyReturn}{Zwraca}
+int 
+\end{DoxyReturn}
+
+
+Definicja w linii 28 pliku wektor3\+D.\+hh.
+
+\mbox{\Hypertarget{class_wektor3_d_ac331c1650351545bc6f765c63b60ff65}\label{class_wektor3_d_ac331c1650351545bc6f765c63b60ff65}} 
+\index{Wektor3D@{Wektor3D}!napis@{napis}}
+\index{napis@{napis}!Wektor3D@{Wektor3D}}
+\subsubsection{\texorpdfstring{napis()}{napis()}}
+{\footnotesize\ttfamily std\+::string Wektor3\+D\+::napis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Zwracanie wektora w postaci stringa.
+
+\begin{DoxyReturn}{Zwraca}
+string. 
+\end{DoxyReturn}
+
+
+Definicja w linii 7 pliku wektor3\+D.\+cpp.
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\mbox{\Hypertarget{class_wektor3_d_a2e8ba0afae88b1441e22d7788cc3a651}\label{class_wektor3_d_a2e8ba0afae88b1441e22d7788cc3a651}} 
+\index{Wektor3D@{Wektor3D}!iloscWszystkie@{iloscWszystkie}}
+\index{iloscWszystkie@{iloscWszystkie}!Wektor3D@{Wektor3D}}
+\subsubsection{\texorpdfstring{iloscWszystkie}{iloscWszystkie}}
+{\footnotesize\ttfamily int Wektor3\+D\+::ilosc\+Wszystkie = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Pole zawierajace wartosci wszystkich utworzonych wektorow3D. 
+
+Definicja w linii 15 pliku wektor3\+D.\+hh.
+
+\mbox{\Hypertarget{class_wektor3_d_aceae8a0d97d25a838ec509288c5b6cc5}\label{class_wektor3_d_aceae8a0d97d25a838ec509288c5b6cc5}} 
+\index{Wektor3D@{Wektor3D}!iloscZniszczone@{iloscZniszczone}}
+\index{iloscZniszczone@{iloscZniszczone}!Wektor3D@{Wektor3D}}
+\subsubsection{\texorpdfstring{iloscZniszczone}{iloscZniszczone}}
+{\footnotesize\ttfamily int Wektor3\+D\+::ilosc\+Zniszczone = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Pole zawierajace wartosci wszystkich usunietych/zniszczonych wektorow3D. 
+
+Definicja w linii 20 pliku wektor3\+D.\+hh.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{wektor3_d_8hh}{wektor3\+D.\+hh}}\item 
+\mbox{\hyperlink{wektor3_d_8cpp}{wektor3\+D.\+cpp}}\end{DoxyCompactItemize}

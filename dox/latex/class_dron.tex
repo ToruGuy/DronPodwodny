@@ -1,0 +1,241 @@
+\hypertarget{class_dron}{}\section{Dokumentacja klasy Dron}
+\label{class_dron}\index{Dron@{Dron}}
+
+
+{\ttfamily \#include $<$dron.\+hh$>$}
+
+
+
+Diagram dziedziczenia dla Dron\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{class_dron__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla Dron\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{class_dron__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dron_ae9b8a464e28bef5d688f49f7d9443fed}{Dron}} ()
+\item 
+\mbox{\hyperlink{class_wektor3_d}{Wektor3D}} \mbox{\hyperlink{class_dron_a4c0f96b6a0f2102c86088b3787cf6367}{operator\mbox{[}$\,$\mbox{]}}} (unsigned int i) const
+\item 
+void \mbox{\hyperlink{class_dron_af467b86d475587e9f389597c7fc4590d}{powrot\+Do\+Ukladu\+Lok}} ()
+\item 
+void \mbox{\hyperlink{class_dron_adae3a230e5bad718740d216e14d6444f}{obrot\+Wokol\+OZ}} (const double \&kat)
+\item 
+void \mbox{\hyperlink{class_dron_a63285f1fc20adaf5808550654b815ae5}{ruch\+Na\+Wprost}} (const double \&kat\+Gora\+Dol, const double \&odleglosc)
+\item 
+bool \mbox{\hyperlink{class_dron_a50dfaf809be907460d95b7bccb4897a2}{wykrywanie\+Kolizji\+Z\+Dnem}} ()
+\item 
+bool \mbox{\hyperlink{class_dron_a580bc95d42e4ef68b5e97e2ec1dfd629}{wykrywanie\+Kolizji\+Z\+Woda}} ()
+\item 
+void \mbox{\hyperlink{class_dron_a0ae898c60e73e6f2a7c75322f243c1d5}{dron\+Poza\+Mapa}} (\mbox{\hyperlink{class_wektor3_d}{Wektor3D}} \&po, \mbox{\hyperlink{class_wektor3_d}{Wektor3D}} \&ko)
+\item 
+std\+::string \mbox{\hyperlink{class_dron_a9f0e086f054e87d53aff19dc29dca65a}{generuj\+Drona\+Do\+Pliku}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_dron_a4d0c2f94599951728a48f848942ed41a}{napis}} () const
+\end{DoxyCompactItemize}
+\subsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_dron_a5308a71851015cd081e5628675a568d0}{kat\+Zmiany\+Ukladu}} = 0
+\item 
+\mbox{\hyperlink{class_wektor3_d}{Wektor3D}} \mbox{\hyperlink{class_dron_a02d702b9fcef2ea34dbf0484c1603be5}{wektor\+Przesuniecia\+Ukladu}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_wektor3_d}{Wektor3D}} $>$ \mbox{\hyperlink{class_dron_a43e00887e49cb783f24175d3529ebfaf}{\+\_\+uklad\+Globalny}}
+\end{DoxyCompactItemize}
+\subsection*{Dodatkowe Dziedziczone Składowe}
+
+
+\subsection{Opis szczegółowy}
+Klasa modeluje pojecie drona, jako prostopadloscianu, poruszajacego sie w ukladzie wspolrzednych. 
+
+Definicja w linii 12 pliku dron.\+hh.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\mbox{\Hypertarget{class_dron_ae9b8a464e28bef5d688f49f7d9443fed}\label{class_dron_ae9b8a464e28bef5d688f49f7d9443fed}} 
+\index{Dron@{Dron}!Dron@{Dron}}
+\index{Dron@{Dron}!Dron@{Dron}}
+\subsubsection{\texorpdfstring{Dron()}{Dron()}}
+{\footnotesize\ttfamily Dron\+::\+Dron (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Konstruktor bezparametryczny klasy dron. Przypisuje \+\_\+uklad\+Globly wartosci ukladu lokalnego. 
+
+Definicja w linii 3 pliku dron.\+cpp.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_dron_a0ae898c60e73e6f2a7c75322f243c1d5}\label{class_dron_a0ae898c60e73e6f2a7c75322f243c1d5}} 
+\index{Dron@{Dron}!dronPozaMapa@{dronPozaMapa}}
+\index{dronPozaMapa@{dronPozaMapa}!Dron@{Dron}}
+\subsubsection{\texorpdfstring{dronPozaMapa()}{dronPozaMapa()}}
+{\footnotesize\ttfamily void Dron\+::dron\+Poza\+Mapa (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_wektor3_d}{Wektor3D}} \&}]{po,  }\item[{\mbox{\hyperlink{class_wektor3_d}{Wektor3D}} \&}]{ko }\end{DoxyParamCaption})}
+
+Sprawdza czy dron doplywa do konca mapy, jesli tak, zmienia wektory zakresu w zaleznosci od lokalizacji drona. 
+
+Definicja w linii 75 pliku dron.\+cpp.
+
+\mbox{\Hypertarget{class_dron_a9f0e086f054e87d53aff19dc29dca65a}\label{class_dron_a9f0e086f054e87d53aff19dc29dca65a}} 
+\index{Dron@{Dron}!generujDronaDoPliku@{generujDronaDoPliku}}
+\index{generujDronaDoPliku@{generujDronaDoPliku}!Dron@{Dron}}
+\subsubsection{\texorpdfstring{generujDronaDoPliku()}{generujDronaDoPliku()}}
+{\footnotesize\ttfamily std\+::string Dron\+::generuj\+Drona\+Do\+Pliku (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Generuje dane o dronie do pliku. Sciezka do pliku znajduje sie pod nazwa D\+R\+ON
+
+\begin{DoxyReturn}{Zwraca}
+std\+::string 
+\end{DoxyReturn}
+
+
+Definicja w linii 101 pliku dron.\+cpp.
+
+\mbox{\Hypertarget{class_dron_a4d0c2f94599951728a48f848942ed41a}\label{class_dron_a4d0c2f94599951728a48f848942ed41a}} 
+\index{Dron@{Dron}!napis@{napis}}
+\index{napis@{napis}!Dron@{Dron}}
+\subsubsection{\texorpdfstring{napis()}{napis()}}
+{\footnotesize\ttfamily std\+::string Dron\+::napis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Daje mozliwosc zwrocenia pola \+\_\+napis.
+
+\begin{DoxyReturn}{Zwraca}
+std\+::string 
+\end{DoxyReturn}
+
+
+Definicja w linii 89 pliku dron.\+hh.
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{class_dron_a4d0c2f94599951728a48f848942ed41a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_dron_adae3a230e5bad718740d216e14d6444f}\label{class_dron_adae3a230e5bad718740d216e14d6444f}} 
+\index{Dron@{Dron}!obrotWokolOZ@{obrotWokolOZ}}
+\index{obrotWokolOZ@{obrotWokolOZ}!Dron@{Dron}}
+\subsubsection{\texorpdfstring{obrotWokolOZ()}{obrotWokolOZ()}}
+{\footnotesize\ttfamily void Dron\+::obrot\+Wokol\+OZ (\begin{DoxyParamCaption}\item[{const double \&}]{kat }\end{DoxyParamCaption})}
+
+Wykonuje ruch drona wokol osi OZ. 
+
+Definicja w linii 16 pliku dron.\+cpp.
+
+\mbox{\Hypertarget{class_dron_a4c0f96b6a0f2102c86088b3787cf6367}\label{class_dron_a4c0f96b6a0f2102c86088b3787cf6367}} 
+\index{Dron@{Dron}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Dron@{Dron}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_wektor3_d}{Wektor3D}} Dron\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{unsigned int}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Przeciazenie operatora umozliwiajace wyswietlanie wartosci ukladu globalnego.
+
+\begin{DoxyReturn}{Zwraca}
+\mbox{\hyperlink{class_wektor3_d}{Wektor3D}} 
+\end{DoxyReturn}
+
+
+Definicja w linii 39 pliku dron.\+hh.
+
+\mbox{\Hypertarget{class_dron_af467b86d475587e9f389597c7fc4590d}\label{class_dron_af467b86d475587e9f389597c7fc4590d}} 
+\index{Dron@{Dron}!powrotDoUkladuLok@{powrotDoUkladuLok}}
+\index{powrotDoUkladuLok@{powrotDoUkladuLok}!Dron@{Dron}}
+\subsubsection{\texorpdfstring{powrotDoUkladuLok()}{powrotDoUkladuLok()}}
+{\footnotesize\ttfamily void Dron\+::powrot\+Do\+Ukladu\+Lok (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Zmienia wartosci ukladu globalnego na lokalne. 
+
+Definicja w linii 8 pliku dron.\+cpp.
+
+\mbox{\Hypertarget{class_dron_a63285f1fc20adaf5808550654b815ae5}\label{class_dron_a63285f1fc20adaf5808550654b815ae5}} 
+\index{Dron@{Dron}!ruchNaWprost@{ruchNaWprost}}
+\index{ruchNaWprost@{ruchNaWprost}!Dron@{Dron}}
+\subsubsection{\texorpdfstring{ruchNaWprost()}{ruchNaWprost()}}
+{\footnotesize\ttfamily void Dron\+::ruch\+Na\+Wprost (\begin{DoxyParamCaption}\item[{const double \&}]{kat\+Gora\+Dol,  }\item[{const double \&}]{odleglosc }\end{DoxyParamCaption})}
+
+Wykonuje ruch drona na wprost oraz pod zadanym katem wznoszenia/opadania. 
+
+Definicja w linii 35 pliku dron.\+cpp.
+
+\mbox{\Hypertarget{class_dron_a50dfaf809be907460d95b7bccb4897a2}\label{class_dron_a50dfaf809be907460d95b7bccb4897a2}} 
+\index{Dron@{Dron}!wykrywanieKolizjiZDnem@{wykrywanieKolizjiZDnem}}
+\index{wykrywanieKolizjiZDnem@{wykrywanieKolizjiZDnem}!Dron@{Dron}}
+\subsubsection{\texorpdfstring{wykrywanieKolizjiZDnem()}{wykrywanieKolizjiZDnem()}}
+{\footnotesize\ttfamily bool Dron\+::wykrywanie\+Kolizji\+Z\+Dnem (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Wykrywa kolizje z dnem, jesli takowa nastapi zwraca true.
+
+\begin{DoxyReturn}{Zwraca}
+bool 
+\end{DoxyReturn}
+
+
+Definicja w linii 47 pliku dron.\+cpp.
+
+\mbox{\Hypertarget{class_dron_a580bc95d42e4ef68b5e97e2ec1dfd629}\label{class_dron_a580bc95d42e4ef68b5e97e2ec1dfd629}} 
+\index{Dron@{Dron}!wykrywanieKolizjiZWoda@{wykrywanieKolizjiZWoda}}
+\index{wykrywanieKolizjiZWoda@{wykrywanieKolizjiZWoda}!Dron@{Dron}}
+\subsubsection{\texorpdfstring{wykrywanieKolizjiZWoda()}{wykrywanieKolizjiZWoda()}}
+{\footnotesize\ttfamily bool Dron\+::wykrywanie\+Kolizji\+Z\+Woda (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Wykrywa doplyniecie do powierzchni wody, jesli takowa nastapi zwraca true.
+
+\begin{DoxyReturn}{Zwraca}
+bool 
+\end{DoxyReturn}
+
+
+Definicja w linii 61 pliku dron.\+cpp.
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\mbox{\Hypertarget{class_dron_a43e00887e49cb783f24175d3529ebfaf}\label{class_dron_a43e00887e49cb783f24175d3529ebfaf}} 
+\index{Dron@{Dron}!\_ukladGlobalny@{\_ukladGlobalny}}
+\index{\_ukladGlobalny@{\_ukladGlobalny}!Dron@{Dron}}
+\subsubsection{\texorpdfstring{\_ukladGlobalny}{\_ukladGlobalny}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_wektor3_d}{Wektor3D}}$>$ Dron\+::\+\_\+uklad\+Globalny\hspace{0.3cm}{\ttfamily [private]}}
+
+Zbior wektorow zawierajacych nowy, zmienny uklad globalny. 
+
+Definicja w linii 26 pliku dron.\+hh.
+
+\mbox{\Hypertarget{class_dron_a5308a71851015cd081e5628675a568d0}\label{class_dron_a5308a71851015cd081e5628675a568d0}} 
+\index{Dron@{Dron}!katZmianyUkladu@{katZmianyUkladu}}
+\index{katZmianyUkladu@{katZmianyUkladu}!Dron@{Dron}}
+\subsubsection{\texorpdfstring{katZmianyUkladu}{katZmianyUkladu}}
+{\footnotesize\ttfamily double Dron\+::kat\+Zmiany\+Ukladu = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+Kat pomiedzy ukladem lokalnym stalym a globalnym zmiennym. 
+
+Definicja w linii 16 pliku dron.\+hh.
+
+\mbox{\Hypertarget{class_dron_a02d702b9fcef2ea34dbf0484c1603be5}\label{class_dron_a02d702b9fcef2ea34dbf0484c1603be5}} 
+\index{Dron@{Dron}!wektorPrzesunieciaUkladu@{wektorPrzesunieciaUkladu}}
+\index{wektorPrzesunieciaUkladu@{wektorPrzesunieciaUkladu}!Dron@{Dron}}
+\subsubsection{\texorpdfstring{wektorPrzesunieciaUkladu}{wektorPrzesunieciaUkladu}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_wektor3_d}{Wektor3D}} Dron\+::wektor\+Przesuniecia\+Ukladu\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\hyperlink{class_wektor}{Wektor}} przesuniecia ukladu globalnego wzgledem lokalnego stalego. 
+
+Definicja w linii 21 pliku dron.\+hh.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{dron_8hh}{dron.\+hh}}\item 
+\mbox{\hyperlink{dron_8cpp}{dron.\+cpp}}\end{DoxyCompactItemize}

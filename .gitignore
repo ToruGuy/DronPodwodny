@@ -1,0 +1,7 @@
+.vscode/
+obj/
+pliki_testow/
+screenshots/
+*.tar
+./*
+*.txt

@@ -1,0 +1,79 @@
+\hypertarget{macierz_8hh}{}\section{Dokumentacja pliku macierz.\+hh}
+\label{macierz_8hh}\index{macierz.hh@{macierz.hh}}
+{\ttfamily \#include \char`\"{}wektor.\+hh\char`\"{}}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+Wykres zależności załączania dla macierz.\+hh\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{macierz_8hh__incl}
+\end{center}
+\end{figure}
+Ten wykres pokazuje, które pliki bezpośrednio lub pośrednio załączają ten plik\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{macierz_8hh__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_macierz}{Macierz$<$ S\+Typ, S\+Wymiar $>$}}
+\end{DoxyCompactItemize}
+\subsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename S\+Typ , int S\+Wymiar$>$ }\\std\+::istream \& \mbox{\hyperlink{macierz_8hh_aabf1de685c3323b984350caf2f6561c4}{operator$>$$>$}} (std\+::istream \&strm, \mbox{\hyperlink{class_macierz}{Macierz}}$<$ S\+Typ, S\+Wymiar $>$ \&mac)
+\item 
+{\footnotesize template$<$typename S\+Typ , int S\+Wymiar$>$ }\\std\+::ostream \& \mbox{\hyperlink{macierz_8hh_aeff8f9c12924cd393d9348ec4fce7afa}{operator$<$$<$}} (std\+::ostream \&strm, const \mbox{\hyperlink{class_macierz}{Macierz}}$<$ S\+Typ, S\+Wymiar $>$ \&mac)
+\end{DoxyCompactItemize}
+
+
+\subsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{macierz_8hh_aeff8f9c12924cd393d9348ec4fce7afa}\label{macierz_8hh_aeff8f9c12924cd393d9348ec4fce7afa}} 
+\index{macierz.hh@{macierz.hh}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!macierz.hh@{macierz.hh}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily template$<$typename S\+Typ , int S\+Wymiar$>$ \\
+std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{strm,  }\item[{const \mbox{\hyperlink{class_macierz}{Macierz}}$<$ S\+Typ, S\+Wymiar $>$ \&}]{mac }\end{DoxyParamCaption})}
+
+Pozwala operatorowi przesuniecia bitowego w prawo wypisac wektor.
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in}}  & {\em strm} & -\/ strumien wypisania \\
+\hline
+\mbox{\texttt{ in}}  & {\em mac} & -\/ macierz wczytywana \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Strumien do wypisania 
+\end{DoxyReturn}
+
+
+Definicja w linii 154 pliku macierz.\+hh.
+
+\mbox{\Hypertarget{macierz_8hh_aabf1de685c3323b984350caf2f6561c4}\label{macierz_8hh_aabf1de685c3323b984350caf2f6561c4}} 
+\index{macierz.hh@{macierz.hh}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!macierz.hh@{macierz.hh}}
+\subsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}}
+{\footnotesize\ttfamily template$<$typename S\+Typ , int S\+Wymiar$>$ \\
+std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{strm,  }\item[{\mbox{\hyperlink{class_macierz}{Macierz}}$<$ S\+Typ, S\+Wymiar $>$ \&}]{mac }\end{DoxyParamCaption})}
+
+Pozwala operatorowi przesuniecia bitowego w lewo wczytywac \mbox{\hyperlink{class_macierz}{Macierz}}. Akcjeptuje jedynie format zgodny z wczytywaniem formatu \mbox{\hyperlink{class_wektor}{Wektor}}. W przypadku niepoprawności zwraca bład. wczytuje macierz w postaci transponowanej.
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in}}  & {\em strm} & -\/ strumien wczytywania \\
+\hline
+\mbox{\texttt{ in}}  & {\em mac} & -\/ macierz wczytywana \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Strumien do wczytania 
+\end{DoxyReturn}
+
+
+Definicja w linii 137 pliku macierz.\+hh.
+

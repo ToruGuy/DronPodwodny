@@ -1,0 +1,526 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Dron-Plywajacy: Dokumentacja klasy Dron</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Dron-Plywajacy
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_dron.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pri-attribs">Atrybuty prywatne</a> &#124;
+<a href="class_dron-members.html">Lista wszystkich składowych</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja klasy Dron</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="dron_8hh_source.html">dron.hh</a>&gt;</code></p>
+<div class="dynheader">
+Diagram dziedziczenia dla Dron</div>
+<div class="dyncontent">
+<div class="center"><img src="class_dron__inherit__graph.png" border="0" usemap="#_dron_inherit__map" alt="Inheritance graph"/></div>
+<map name="_dron_inherit__map" id="_dron_inherit__map">
+<area shape="rect"  title=" " alt="" coords="45,155,99,181"/>
+<area shape="rect"  href="class_prostopadloscian.html" title=" " alt="" coords="5,80,139,107"/>
+<area shape="rect"  href="class_powierzchnia.html" title=" " alt="" coords="18,5,126,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legenda</a>]</span></center></div>
+<div class="dynheader">
+Diagram współpracy dla Dron:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_dron__coll__graph.png" border="0" usemap="#_dron_coll__map" alt="Collaboration graph"/></div>
+<map name="_dron_coll__map" id="_dron_coll__map">
+<area shape="rect"  title=" " alt="" coords="112,171,165,197"/>
+<area shape="rect"  href="class_prostopadloscian.html" title=" " alt="" coords="5,81,139,108"/>
+<area shape="rect"  href="class_powierzchnia.html" title=" " alt="" coords="11,5,119,32"/>
+<area shape="rect"  href="class_wektor3_d.html" title=" " alt="" coords="174,81,261,108"/>
+<area shape="rect"  href="class_wektor.html" title=" " alt="" coords="143,5,302,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legenda</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:ae9b8a464e28bef5d688f49f7d9443fed"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dron.html#ae9b8a464e28bef5d688f49f7d9443fed">Dron</a> ()</td></tr>
+<tr class="separator:ae9b8a464e28bef5d688f49f7d9443fed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c0f96b6a0f2102c86088b3787cf6367"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wektor3_d.html">Wektor3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dron.html#a4c0f96b6a0f2102c86088b3787cf6367">operator[]</a> (unsigned int i) const</td></tr>
+<tr class="separator:a4c0f96b6a0f2102c86088b3787cf6367"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af467b86d475587e9f389597c7fc4590d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dron.html#af467b86d475587e9f389597c7fc4590d">powrotDoUkladuLok</a> ()</td></tr>
+<tr class="separator:af467b86d475587e9f389597c7fc4590d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adae3a230e5bad718740d216e14d6444f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dron.html#adae3a230e5bad718740d216e14d6444f">obrotWokolOZ</a> (const double &amp;kat)</td></tr>
+<tr class="separator:adae3a230e5bad718740d216e14d6444f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63285f1fc20adaf5808550654b815ae5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dron.html#a63285f1fc20adaf5808550654b815ae5">ruchNaWprost</a> (const double &amp;katGoraDol, const double &amp;odleglosc)</td></tr>
+<tr class="separator:a63285f1fc20adaf5808550654b815ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50dfaf809be907460d95b7bccb4897a2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dron.html#a50dfaf809be907460d95b7bccb4897a2">wykrywanieKolizjiZDnem</a> ()</td></tr>
+<tr class="separator:a50dfaf809be907460d95b7bccb4897a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a580bc95d42e4ef68b5e97e2ec1dfd629"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dron.html#a580bc95d42e4ef68b5e97e2ec1dfd629">wykrywanieKolizjiZWoda</a> ()</td></tr>
+<tr class="separator:a580bc95d42e4ef68b5e97e2ec1dfd629"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ae898c60e73e6f2a7c75322f243c1d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dron.html#a0ae898c60e73e6f2a7c75322f243c1d5">dronPozaMapa</a> (<a class="el" href="class_wektor3_d.html">Wektor3D</a> &amp;po, <a class="el" href="class_wektor3_d.html">Wektor3D</a> &amp;ko)</td></tr>
+<tr class="separator:a0ae898c60e73e6f2a7c75322f243c1d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f0e086f054e87d53aff19dc29dca65a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dron.html#a9f0e086f054e87d53aff19dc29dca65a">generujDronaDoPliku</a> ()</td></tr>
+<tr class="separator:a9f0e086f054e87d53aff19dc29dca65a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d0c2f94599951728a48f848942ed41a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dron.html#a4d0c2f94599951728a48f848942ed41a">napis</a> () const</td></tr>
+<tr class="separator:a4d0c2f94599951728a48f848942ed41a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_prostopadloscian"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_prostopadloscian')"><img src="closed.png" alt="-"/>&#160;Metody publiczne dziedziczone z <a class="el" href="class_prostopadloscian.html">Prostopadloscian</a></td></tr>
+<tr class="memitem:a432b8df2af37ba1a3596f500824eaffe inherit pub_methods_class_prostopadloscian"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_prostopadloscian.html#a432b8df2af37ba1a3596f500824eaffe">Prostopadloscian</a> ()</td></tr>
+<tr class="separator:a432b8df2af37ba1a3596f500824eaffe inherit pub_methods_class_prostopadloscian"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_powierzchnia"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_powierzchnia')"><img src="closed.png" alt="-"/>&#160;Metody publiczne dziedziczone z <a class="el" href="class_powierzchnia.html">Powierzchnia</a></td></tr>
+<tr class="memitem:ad6359705945ff2b275950f918d34a49e inherit pub_methods_class_powierzchnia"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wektor3_d.html">Wektor3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_powierzchnia.html#ad6359705945ff2b275950f918d34a49e">operator[]</a> (unsigned int i) const</td></tr>
+<tr class="separator:ad6359705945ff2b275950f918d34a49e inherit pub_methods_class_powierzchnia"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65630dfdb8e9601a04d186a74adff189 inherit pub_methods_class_powierzchnia"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wektor3_d.html">Wektor3D</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_powierzchnia.html#a65630dfdb8e9601a04d186a74adff189">operator[]</a> (unsigned int i)</td></tr>
+<tr class="separator:a65630dfdb8e9601a04d186a74adff189 inherit pub_methods_class_powierzchnia"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaccea9358f37f18de45e0afddd84c93d inherit pub_methods_class_powierzchnia"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_powierzchnia.html#aaccea9358f37f18de45e0afddd84c93d">ilosc</a> () const</td></tr>
+<tr class="separator:aaccea9358f37f18de45e0afddd84c93d inherit pub_methods_class_powierzchnia"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6ff9b19f96772931a2861fde2f14ade inherit pub_methods_class_powierzchnia"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_powierzchnia.html#ab6ff9b19f96772931a2861fde2f14ade">napis</a> () const</td></tr>
+<tr class="separator:ab6ff9b19f96772931a2861fde2f14ade inherit pub_methods_class_powierzchnia"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atrybuty prywatne</h2></td></tr>
+<tr class="memitem:a5308a71851015cd081e5628675a568d0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dron.html#a5308a71851015cd081e5628675a568d0">katZmianyUkladu</a> = 0</td></tr>
+<tr class="separator:a5308a71851015cd081e5628675a568d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02d702b9fcef2ea34dbf0484c1603be5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wektor3_d.html">Wektor3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dron.html#a02d702b9fcef2ea34dbf0484c1603be5">wektorPrzesunieciaUkladu</a></td></tr>
+<tr class="separator:a02d702b9fcef2ea34dbf0484c1603be5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43e00887e49cb783f24175d3529ebfaf"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_wektor3_d.html">Wektor3D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dron.html#a43e00887e49cb783f24175d3529ebfaf">_ukladGlobalny</a></td></tr>
+<tr class="separator:a43e00887e49cb783f24175d3529ebfaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Dodatkowe Dziedziczone Składowe</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_powierzchnia"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_powierzchnia')"><img src="closed.png" alt="-"/>&#160;Atrybuty chronione dziedziczone z <a class="el" href="class_powierzchnia.html">Powierzchnia</a></td></tr>
+<tr class="memitem:aab8cbab789010fa80e3b9c7d27669951 inherit pro_attribs_class_powierzchnia"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_wektor3_d.html">Wektor3D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_powierzchnia.html#aab8cbab789010fa80e3b9c7d27669951">_wierzcholki</a></td></tr>
+<tr class="separator:aab8cbab789010fa80e3b9c7d27669951 inherit pro_attribs_class_powierzchnia"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bedeffe3d73b7b54c4b1d33dc81b83a inherit pro_attribs_class_powierzchnia"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_powierzchnia.html#a6bedeffe3d73b7b54c4b1d33dc81b83a">_napis</a> = &quot;&quot;</td></tr>
+<tr class="separator:a6bedeffe3d73b7b54c4b1d33dc81b83a inherit pro_attribs_class_powierzchnia"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Klasa modeluje pojecie drona, jako prostopadloscianu, poruszajacego sie w ukladzie wspolrzednych. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="dron_8hh_source.html#l00012">12</a> pliku <a class="el" href="dron_8hh_source.html">dron.hh</a>.</p>
+</div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
+<a id="ae9b8a464e28bef5d688f49f7d9443fed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9b8a464e28bef5d688f49f7d9443fed">&#9670;&nbsp;</a></span>Dron()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dron::Dron </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Konstruktor bezparametryczny klasy dron. Przypisuje _ukladGlobly wartosci ukladu lokalnego. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="dron_8cpp_source.html#l00003">3</a> pliku <a class="el" href="dron_8cpp_source.html">dron.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="a0ae898c60e73e6f2a7c75322f243c1d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ae898c60e73e6f2a7c75322f243c1d5">&#9670;&nbsp;</a></span>dronPozaMapa()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Dron::dronPozaMapa </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_wektor3_d.html">Wektor3D</a> &amp;&#160;</td>
+          <td class="paramname"><em>po</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_wektor3_d.html">Wektor3D</a> &amp;&#160;</td>
+          <td class="paramname"><em>ko</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sprawdza czy dron doplywa do konca mapy, jesli tak, zmienia wektory zakresu w zaleznosci od lokalizacji drona. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="dron_8cpp_source.html#l00075">75</a> pliku <a class="el" href="dron_8cpp_source.html">dron.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a9f0e086f054e87d53aff19dc29dca65a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f0e086f054e87d53aff19dc29dca65a">&#9670;&nbsp;</a></span>generujDronaDoPliku()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Dron::generujDronaDoPliku </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Generuje dane o dronie do pliku. Sciezka do pliku znajduje sie pod nazwa DRON</p>
+<dl class="section return"><dt>Zwraca</dt><dd>std::string </dd></dl>
+
+<p class="definition">Definicja w linii <a class="el" href="dron_8cpp_source.html#l00101">101</a> pliku <a class="el" href="dron_8cpp_source.html">dron.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4d0c2f94599951728a48f848942ed41a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d0c2f94599951728a48f848942ed41a">&#9670;&nbsp;</a></span>napis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Dron::napis </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Daje mozliwosc zwrocenia pola _napis.</p>
+<dl class="section return"><dt>Zwraca</dt><dd>std::string </dd></dl>
+
+<p class="definition">Definicja w linii <a class="el" href="dron_8hh_source.html#l00089">89</a> pliku <a class="el" href="dron_8hh_source.html">dron.hh</a>.</p>
+<div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_dron_a4d0c2f94599951728a48f848942ed41a_icgraph.png" border="0" usemap="#class_dron_a4d0c2f94599951728a48f848942ed41a_icgraph" alt=""/></div>
+<map name="class_dron_a4d0c2f94599951728a48f848942ed41a_icgraph" id="class_dron_a4d0c2f94599951728a48f848942ed41a_icgraph">
+<area shape="rect"  title=" " alt="" coords="179,5,275,32"/>
+<area shape="rect"  href="menu_8cpp.html#a924b8ff013a18f0f1f0fdbdda6538e07" title=" " alt="" coords="5,5,131,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adae3a230e5bad718740d216e14d6444f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adae3a230e5bad718740d216e14d6444f">&#9670;&nbsp;</a></span>obrotWokolOZ()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Dron::obrotWokolOZ </td>
+          <td>(</td>
+          <td class="paramtype">const double &amp;&#160;</td>
+          <td class="paramname"><em>kat</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Wykonuje ruch drona wokol osi OZ. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="dron_8cpp_source.html#l00016">16</a> pliku <a class="el" href="dron_8cpp_source.html">dron.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4c0f96b6a0f2102c86088b3787cf6367"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c0f96b6a0f2102c86088b3787cf6367">&#9670;&nbsp;</a></span>operator[]()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_wektor3_d.html">Wektor3D</a> Dron::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Przeciazenie operatora umozliwiajace wyswietlanie wartosci ukladu globalnego.</p>
+<dl class="section return"><dt>Zwraca</dt><dd><a class="el" href="class_wektor3_d.html">Wektor3D</a> </dd></dl>
+
+<p class="definition">Definicja w linii <a class="el" href="dron_8hh_source.html#l00039">39</a> pliku <a class="el" href="dron_8hh_source.html">dron.hh</a>.</p>
+
+</div>
+</div>
+<a id="af467b86d475587e9f389597c7fc4590d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af467b86d475587e9f389597c7fc4590d">&#9670;&nbsp;</a></span>powrotDoUkladuLok()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Dron::powrotDoUkladuLok </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Zmienia wartosci ukladu globalnego na lokalne. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="dron_8cpp_source.html#l00008">8</a> pliku <a class="el" href="dron_8cpp_source.html">dron.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a63285f1fc20adaf5808550654b815ae5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63285f1fc20adaf5808550654b815ae5">&#9670;&nbsp;</a></span>ruchNaWprost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Dron::ruchNaWprost </td>
+          <td>(</td>
+          <td class="paramtype">const double &amp;&#160;</td>
+          <td class="paramname"><em>katGoraDol</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double &amp;&#160;</td>
+          <td class="paramname"><em>odleglosc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Wykonuje ruch drona na wprost oraz pod zadanym katem wznoszenia/opadania. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="dron_8cpp_source.html#l00035">35</a> pliku <a class="el" href="dron_8cpp_source.html">dron.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a50dfaf809be907460d95b7bccb4897a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50dfaf809be907460d95b7bccb4897a2">&#9670;&nbsp;</a></span>wykrywanieKolizjiZDnem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Dron::wykrywanieKolizjiZDnem </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Wykrywa kolizje z dnem, jesli takowa nastapi zwraca true.</p>
+<dl class="section return"><dt>Zwraca</dt><dd>bool </dd></dl>
+
+<p class="definition">Definicja w linii <a class="el" href="dron_8cpp_source.html#l00047">47</a> pliku <a class="el" href="dron_8cpp_source.html">dron.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a580bc95d42e4ef68b5e97e2ec1dfd629"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a580bc95d42e4ef68b5e97e2ec1dfd629">&#9670;&nbsp;</a></span>wykrywanieKolizjiZWoda()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Dron::wykrywanieKolizjiZWoda </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Wykrywa doplyniecie do powierzchni wody, jesli takowa nastapi zwraca true.</p>
+<dl class="section return"><dt>Zwraca</dt><dd>bool </dd></dl>
+
+<p class="definition">Definicja w linii <a class="el" href="dron_8cpp_source.html#l00061">61</a> pliku <a class="el" href="dron_8cpp_source.html">dron.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a id="a43e00887e49cb783f24175d3529ebfaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43e00887e49cb783f24175d3529ebfaf">&#9670;&nbsp;</a></span>_ukladGlobalny</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="class_wektor3_d.html">Wektor3D</a>&gt; Dron::_ukladGlobalny</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Zbior wektorow zawierajacych nowy, zmienny uklad globalny. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="dron_8hh_source.html#l00026">26</a> pliku <a class="el" href="dron_8hh_source.html">dron.hh</a>.</p>
+
+</div>
+</div>
+<a id="a5308a71851015cd081e5628675a568d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5308a71851015cd081e5628675a568d0">&#9670;&nbsp;</a></span>katZmianyUkladu</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Dron::katZmianyUkladu = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Kat pomiedzy ukladem lokalnym stalym a globalnym zmiennym. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="dron_8hh_source.html#l00016">16</a> pliku <a class="el" href="dron_8hh_source.html">dron.hh</a>.</p>
+
+</div>
+</div>
+<a id="a02d702b9fcef2ea34dbf0484c1603be5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02d702b9fcef2ea34dbf0484c1603be5">&#9670;&nbsp;</a></span>wektorPrzesunieciaUkladu</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_wektor3_d.html">Wektor3D</a> Dron::wektorPrzesunieciaUkladu</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="class_wektor.html">Wektor</a> przesuniecia ukladu globalnego wzgledem lokalnego stalego. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="dron_8hh_source.html#l00021">21</a> pliku <a class="el" href="dron_8hh_source.html">dron.hh</a>.</p>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li><a class="el" href="dron_8hh_source.html">dron.hh</a></li>
+<li><a class="el" href="dron_8cpp_source.html">dron.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_dron.html">Dron</a></li>
+    <li class="footer">Wygenerowano przez
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+\hypertarget{menu_8cpp}{}\section{Dokumentacja pliku menu.\+cpp}
+\label{menu_8cpp}\index{menu.cpp@{menu.cpp}}
+{\ttfamily \#include \char`\"{}menu.\+hh\char`\"{}}\newline
+Wykres zależności załączania dla menu.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{menu_8cpp_a94d72e7cfca9043780b1dda5a01e9632}{wypisz\+Opcje}} ()
+\item 
+bool \mbox{\hyperlink{menu_8cpp_a32a0a14b80567d267e3e6d831c2a517b}{otworz\+Menu}} (\mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+G\+N\+U\+Plota}} Lacze)
+\item 
+void \mbox{\hyperlink{menu_8cpp_a924b8ff013a18f0f1f0fdbdda6538e07}{generuj\+Plik\+G\+NU}} (const \mbox{\hyperlink{class_dron}{Dron}} \&dron, const \mbox{\hyperlink{class_scena}{Scena}} \&scena)
+\item 
+void \mbox{\hyperlink{menu_8cpp_a233cd71579a56ad0b2926d4c5217eaa1}{obsluga\+G\+N\+Uplota}} (const \mbox{\hyperlink{class_wektor3_d}{Wektor3D}} \&wektorP, const \mbox{\hyperlink{class_wektor3_d}{Wektor3D}} \&wektorK, \mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+G\+N\+U\+Plota}} Lacze)
+\end{DoxyCompactItemize}
+
+
+\subsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{menu_8cpp_a924b8ff013a18f0f1f0fdbdda6538e07}\label{menu_8cpp_a924b8ff013a18f0f1f0fdbdda6538e07}} 
+\index{menu.cpp@{menu.cpp}!generujPlikGNU@{generujPlikGNU}}
+\index{generujPlikGNU@{generujPlikGNU}!menu.cpp@{menu.cpp}}
+\subsubsection{\texorpdfstring{generujPlikGNU()}{generujPlikGNU()}}
+{\footnotesize\ttfamily void generuj\+Plik\+G\+NU (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_dron}{Dron}} \&}]{dron,  }\item[{const \mbox{\hyperlink{class_scena}{Scena}} \&}]{scena }\end{DoxyParamCaption})}
+
+Fuknkcja generuje dane o dronie oraz scenie do pliku.
+
+Plik znajduje sie w stalych, nazwa P\+L\+I\+K\+G\+NU. 
+
+Definicja w linii 157 pliku menu.\+cpp.
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{menu_8cpp_a924b8ff013a18f0f1f0fdbdda6538e07_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{menu_8cpp_a233cd71579a56ad0b2926d4c5217eaa1}\label{menu_8cpp_a233cd71579a56ad0b2926d4c5217eaa1}} 
+\index{menu.cpp@{menu.cpp}!obslugaGNUplota@{obslugaGNUplota}}
+\index{obslugaGNUplota@{obslugaGNUplota}!menu.cpp@{menu.cpp}}
+\subsubsection{\texorpdfstring{obslugaGNUplota()}{obslugaGNUplota()}}
+{\footnotesize\ttfamily void obsluga\+G\+N\+Uplota (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_wektor3_d}{Wektor3D}} \&}]{wektorP,  }\item[{const \mbox{\hyperlink{class_wektor3_d}{Wektor3D}} \&}]{wektorK,  }\item[{\mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+G\+N\+U\+Plota}}}]{Lacze }\end{DoxyParamCaption})}
+
+Fuknkcja obsluguje lacze do gnuplota. W szczegolnosci ustawia zakres widziany przez uzytkownika na podstawie wektorow zakresu. 
+
+Definicja w linii 164 pliku menu.\+cpp.
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8cpp_a233cd71579a56ad0b2926d4c5217eaa1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{menu_8cpp_a32a0a14b80567d267e3e6d831c2a517b}\label{menu_8cpp_a32a0a14b80567d267e3e6d831c2a517b}} 
+\index{menu.cpp@{menu.cpp}!otworzMenu@{otworzMenu}}
+\index{otworzMenu@{otworzMenu}!menu.cpp@{menu.cpp}}
+\subsubsection{\texorpdfstring{otworzMenu()}{otworzMenu()}}
+{\footnotesize\ttfamily bool otworz\+Menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+G\+N\+U\+Plota}}}]{Lacze }\end{DoxyParamCaption})}
+
+Fukcja obsugi menu, obsluguje uzytkownika oraz pelni fukcje wykonawcza.
+
+Opcje menu\+: r -\/ zadaj ruch na wprost wraz z katem wznoszenia/opadania; o -\/ zadaj zmiane orientacji w poziomie; m -\/ wyswietl menu; k -\/ konczy dzialanie programu;
+
+\begin{DoxyReturn}{Zwraca}
+bool -\/ w momencie powodzenia true 
+\end{DoxyReturn}
+
+
+Definicja w linii 8 pliku menu.\+cpp.
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8cpp_a32a0a14b80567d267e3e6d831c2a517b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{menu_8cpp_a94d72e7cfca9043780b1dda5a01e9632}\label{menu_8cpp_a94d72e7cfca9043780b1dda5a01e9632}} 
+\index{menu.cpp@{menu.cpp}!wypiszOpcje@{wypiszOpcje}}
+\index{wypiszOpcje@{wypiszOpcje}!menu.cpp@{menu.cpp}}
+\subsubsection{\texorpdfstring{wypiszOpcje()}{wypiszOpcje()}}
+{\footnotesize\ttfamily void wypisz\+Opcje (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Fuknkcja wypisuje na std out dostepne w menu opcje. 
+
+Definicja w linii 2 pliku menu.\+cpp.
+
