@@ -4,9 +4,11 @@ The program gives you ability to steer underwater drone!
 
 Program written in C++, graphical interpretation uses GNUplot.
 More information about GNUplot:
+
 http://www.gnuplot.info/
 
 To transfer data from C++ to gnuplot, it uses “Łącze do GNUplota”:
+
 https://kcir.pwr.edu.pl/~kreczmer/kpo/materialy/dodatki/lacze_do_gnuplota/doc/doxygen/index.html
 
 # Installation
