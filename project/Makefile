@@ -6,7 +6,7 @@ CXXFLAGS=-g -Iinc -Wall -pedantic -std=c++11
 TRGDIR=/tmp/dron-podwodny
 
 ./dron-podwodny: obj obj/main.o obj/lacze_do_gnuplota.o obj/wektor3D.o obj/scena.o obj/woda.o obj/dno.o obj/powierzchnia.o obj/prostopadloscian.o obj/dron.o obj/menu.o obj/macierz3D.o
-	g++ -Wall -pedantic -std=c++11 -o ./rysowanie_3D obj/main.o\
+	g++ -Wall -pedantic -std=c++11 -o ./dron-podwodny obj/main.o\
                         obj/lacze_do_gnuplota.o obj/wektor3D.o obj/scena.o obj/woda.o obj/dno.o obj/powierzchnia.o obj/prostopadloscian.o obj/dron.o obj/menu.o obj/macierz3D.o
 
 
@@ -47,4 +47,4 @@ obj/macierz3D.o: src/macierz3D.cpp inc/macierz3D.hh inc/macierz.hh inc/wektor3D.
 	g++ -c ${CXXFLAGS} -o obj/macierz3D.o src/macierz3D.cpp
 
 clean:
-	rm -f obj/*.o ./rysowanie_3D
+	rm -f obj/*.o ./dron-podwodny

@@ -16,7 +16,7 @@ bool otworzMenu(PzG::LaczeDoGNUPlota  Lacze){
 
     while(wpisanyZnak != 'k'){
         przemieszczenie = 1;
-        std::cout<<"Twoj wybor, m - menu> ";
+        std::cout<<"Twoj wybor, m - menu > ";
         std::cin>>wpisanyZnak;
         if(std::cin.fail()){
             std::cerr<<"Wczytywanie litery nie powiodlo sie!"<<std::endl;
@@ -44,8 +44,8 @@ bool otworzMenu(PzG::LaczeDoGNUPlota  Lacze){
             }
             std::cout<<std::endl<<std::endl;
 
-            std::cout<<"Podaj wartosc odleglosci, na ktora ma sie przemiescic dron."<<std::endl;
-            std::cout<<"Wartosc odleglosci> ";
+            std::cout<<"Podaj wartosc przemieszczenia drona."<<std::endl;
+            std::cout<<"Wartosc odleglosci > ";
             std::cin>>odleglosc;
             if(std::cin.fail()){
                 std::cerr<<"Wczytywanie odleglosci nie powiodlo sie!"<<std::endl;
@@ -88,6 +88,7 @@ bool otworzMenu(PzG::LaczeDoGNUPlota  Lacze){
             std::cout<<std::endl<<"Podaj wartosc kata obrotu w stopniach."<<std::endl;
             std::cout<<"Podaj kat obrotu: ";
             std::cin>>obrot;
+            std::cout<<std::endl;
             if(std::cin.fail()){
                 std::cerr<<"Wczytywanie obrotu nie powiodlo sie!"<<std::endl;
                 return false;
@@ -123,8 +124,8 @@ bool otworzMenu(PzG::LaczeDoGNUPlota  Lacze){
             }
             
             
-            std::cout<<"Aktualna ilosc obiektow Wektor3D> "<<(*po).ileTeraz()<<std::endl;
-            std::cout<<"Laczna ilosc obiektow> "<<(*po).ileWszystkie()<<std::endl;
+            std::cout<<"Aktualna ilosc obiektow Wektor3D > "<<(*po).ileTeraz()<<std::endl;
+            std::cout<<"Laczna ilosc obiektow > "<<(*po).ileWszystkie()<<std::endl;
             
             break;
 
@@ -149,8 +150,8 @@ bool otworzMenu(PzG::LaczeDoGNUPlota  Lacze){
     delete po;
     delete ko;
 
-    std::cout<<"Aktualna ilosc obiektow Wektor3D> "<<(*po).ileTeraz()<<std::endl;
-    std::cout<<"Laczna ilosc obiektow> "<<(*po).ileWszystkie()<<std::endl<<std::endl;
+    std::cout<<"Aktualna ilosc obiektow Wektor3D > "<<(*po).ileTeraz()<<std::endl;
+    std::cout<<"Laczna ilosc obiektow > "<<(*po).ileWszystkie()<<std::endl<<std::endl;
     return true;
 }
 
