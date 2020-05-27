@@ -5,17 +5,20 @@ void wypiszOpcje(){
     std::cout<<"m - wyswietl menu"<<std::endl<<std::endl;
     std::cout<<"k - koniec dzialania programu"<<std::endl;
 }
-bool otworzMenu(PzG::LaczeDoGNUPlota  Lacze){
+bool otworzMenu(){
+    PzG::LaczeDoGNUPlota Lacze;
     char wpisanyZnak;
     int przemieszczenie = 1;
     Wektor3D *po =new Wektor3D(-40, -40, 0);
     Wektor3D *ko =new Wektor3D(100, 100, 100);
 
     Scena *scena = new Scena(*po, *ko);
-    Dron *dron = new Dron();
+
+    Lacze.ZmienTrybRys(PzG::TR_3D);
+    Lacze.Inicjalizuj();  // Tutaj startuje gnuplot.
 
     while(wpisanyZnak != 'k'){
-        przemieszczenie = 1;
+        przemieszczenie = JEDNOSTKOWA;
         std::cout<<"Twoj wybor, m - menu > ";
         std::cin>>wpisanyZnak;
         if(std::cin.fail()){
@@ -54,26 +57,11 @@ bool otworzMenu(PzG::LaczeDoGNUPlota  Lacze){
             std::cout<<std::endl<<std::endl;
             
             for(int i = 0; i < odleglosc; i++){
-                Scena *scena = new Scena(*po, *ko);
-
-                (*dron).ruchNaWprost(katGoraDol, przemieszczenie);
-                (*dron).dronPozaMapa(*po, *ko);
-                (*scena).generujSceneDoPliku();
-                (*dron).generujDronaDoPliku();
                 
-                //podczas kontatku z dnem program konczy dzialanie 
-                if((*dron).wykrywanieKolizjiZDnem()){return false;}
-
-                //podczas kontaktu z powierzchnia wody dron ma uniemozliwione dalsze wznoszenie sie
-                if((*dron).wykrywanieKolizjiZWoda()){
-                    katGoraDol == 90 ? przemieszczenie = 0:0;
-                    katGoraDol>0 ? katGoraDol = 0:0;
-                }
-                generujPlikGNU(*dron, *scena);
+                (*scena).ruchDronaNaWprost(katGoraDol, przemieszczenie);
+                (*scena).aktualizujScene(*po, *ko);
                 obslugaGNUplota(*po, *ko, Lacze);
                 usleep(SLEEP);
-
-                delete scena;
             }
             
             
@@ -84,7 +72,6 @@ bool otworzMenu(PzG::LaczeDoGNUPlota  Lacze){
         case 'o':
             double obrot;
             
-
             std::cout<<std::endl<<"Podaj wartosc kata obrotu w stopniach."<<std::endl;
             std::cout<<"Podaj kat obrotu: ";
             std::cin>>obrot;
@@ -97,29 +84,19 @@ bool otworzMenu(PzG::LaczeDoGNUPlota  Lacze){
             if(obrot < 0){
                 obrot *= -1;
                 for(int i = 0; i < obrot; i++){
-                    Scena *scena = new Scena(*po, *ko);
 
-                    (*dron).obrotWokolOZ(-1);
-                    (*scena).generujSceneDoPliku();
-                    (*dron).generujDronaDoPliku();
-                    generujPlikGNU(*dron, *scena);
+                    (*scena).obrotDrona(-1);
+                    (*scena).aktualizujScene(*po, *ko);
                     obslugaGNUplota(*po, *ko, Lacze);
                     usleep(SLEEP);
-
-                    delete scena;
                 }
             }else{ 
                 for(int i = 0; i < obrot; i++){
-                    Scena *scena = new Scena(*po, *ko);
 
-                    (*dron).obrotWokolOZ(1);
-                    (*scena).generujSceneDoPliku();
-                    (*dron).generujDronaDoPliku();
-                    generujPlikGNU(*dron, *scena);
+                    (*scena).obrotDrona(1);
+                    (*scena).aktualizujScene(*po, *ko);
                     obslugaGNUplota(*po, *ko, Lacze);
                     usleep(SLEEP);
-        
-                    delete scena;
                 }
             }
             
@@ -146,7 +123,6 @@ bool otworzMenu(PzG::LaczeDoGNUPlota  Lacze){
     }
 
     delete scena;
-    delete dron;
     delete po;
     delete ko;
 
@@ -155,12 +131,6 @@ bool otworzMenu(PzG::LaczeDoGNUPlota  Lacze){
     return true;
 }
 
-void generujPlikGNU(const Dron& dron, const Scena& scena){
-    std::ofstream Strm(PLIKGNU);
-    if (Strm.fail()) std::cerr<<"Zapis glownego pliku GNUplota sie nie powiodl!"<<std::endl;
-
-    Strm<<scena.napis()<<dron.napis();
-}
 
 void obslugaGNUplota(const Wektor3D& wektorP, const Wektor3D& wektorK, PzG::LaczeDoGNUPlota  Lacze){
 

@@ -68,12 +68,6 @@ public:
     bool wykrywanieKolizjiZWoda();
 
     /**
-     * Sprawdza czy dron doplywa do konca mapy, jesli tak,
-     * zmienia wektory zakresu w zaleznosci od lokalizacji drona.
-     */
-    void dronPozaMapa(Wektor3D& po, Wektor3D& ko);
-
-    /**
      * Generuje dane o dronie do pliku.
      * Sciezka do pliku znajduje sie pod nazwa DRON
      * 

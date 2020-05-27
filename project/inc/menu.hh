@@ -3,7 +3,6 @@
 
 #include <unistd.h>
 #include <time.h>
-#include "dron.hh"
 #include "scena.hh"
 #include "lacze_do_gnuplota.hh"
 
@@ -23,7 +22,7 @@ void wypiszOpcje();
  * 
  * @return bool - w momencie powodzenia true
  */
-bool otworzMenu(PzG::LaczeDoGNUPlota  Lacze);
+bool otworzMenu();
 
 /**
  * Fuknkcja generuje dane o dronie oraz scenie do pliku.

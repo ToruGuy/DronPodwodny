@@ -78,32 +78,6 @@ bool Dron::wykrywanieKolizjiZWoda(){
     return false;
 }
 
-void Dron::dronPozaMapa(Wektor3D& po, Wektor3D& ko){
-    //dron doplywa do max X planszy
-    if(_ukladGlobalny[0](0) > ko(0) - 4 * KROK_SIATKI){
-        ko(0) += 6 * KROK_SIATKI;
-        po(0) += 6 * KROK_SIATKI;
-    }
-
-    //dron doplywa do min X planszy
-    if(_ukladGlobalny[0](0) < po(0) + 4 * KROK_SIATKI){
-        ko(0) -= 6 * KROK_SIATKI;
-        po(0) -= 6 * KROK_SIATKI;
-    }
-
-    //dron doplywa do max Y planszy
-    if(_ukladGlobalny[0](1) > ko(1) - 4 * KROK_SIATKI){
-        ko(1) += 6 * KROK_SIATKI;
-        po(1) += 6 * KROK_SIATKI;
-    }
-
-    //dron doplywa do min Y planszy
-    if(_ukladGlobalny[0](1) < po(1) + 4 * KROK_SIATKI){
-        ko(1) -= 6 * KROK_SIATKI;
-        po(1) -= 6 * KROK_SIATKI;
-    }
-}
-
 std::string Dron::generujDronaDoPliku(){
     int i = 0;
     _napis = "";

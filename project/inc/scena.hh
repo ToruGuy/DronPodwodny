@@ -35,14 +35,20 @@ public:
      * @param[in] poczatek - wektorowy poczatek zakresu
      * @param[in] koniec - wektorowy koniec zakresu 
      */
-    Scena(Wektor3D zakresP, Wektor3D zakresK){woda = new Woda(zakresP, zakresK);dno = new Dno(zakresP, zakresK); /*dron = new Dron();*/}
+    Scena(Wektor3D zakresP, Wektor3D zakresK){woda = new Woda(zakresP, zakresK);dno = new Dno(zakresP, zakresK); dron = new Dron();}
     
     /**
      * Destruktor sceny
      */
-    ~Scena(){delete woda; delete dno;}
+    ~Scena(){delete woda; delete dno; delete dron;}
 
-    void aktualizujScene(Wektor3D zakresP, Wektor3D zakresK);
+    Wektor3D polozenieDrona()const{return (*dron)[0];}
+
+    void aktualizujScene(Wektor3D& zakresP, Wektor3D& zakresK);
+
+    void ruchDronaNaWprost(int& katGoraDol, int& odleglosc);
+
+    void obrotDrona(const double& obrot);
 
     /**
      * Funkcja generujuje wartosci dna oraz wody, po czym zwraca je do pliku
