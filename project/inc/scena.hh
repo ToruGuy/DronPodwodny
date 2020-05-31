@@ -3,6 +3,7 @@
 #include "woda.hh"
 #include "dno.hh"
 #include "dron.hh"
+#include <memory>
 #include <string>
 #include <fstream>
 #include <cstdlib>
@@ -35,7 +36,7 @@ public:
      * @param[in] poczatek - wektorowy poczatek zakresu
      * @param[in] koniec - wektorowy koniec zakresu 
      */
-    Scena(Wektor3D zakresP, Wektor3D zakresK){woda = new Woda(zakresP, zakresK);dno = new Dno(zakresP, zakresK); dron = new Dron();}
+    Scena(Wektor3D& zakresP, Wektor3D& zakresK){woda = new Woda(zakresP, zakresK);dno = new Dno(zakresP, zakresK); dron = new Dron();}
     
     /**
      * Destruktor sceny

@@ -70,7 +70,7 @@ bool otworzMenu(){
             break;
 
         case 'o':
-            double obrot;
+            int obrot;
             
             std::cout<<std::endl<<"Podaj wartosc kata obrotu w stopniach."<<std::endl;
             std::cout<<"Podaj kat obrotu: ";
@@ -83,6 +83,12 @@ bool otworzMenu(){
             
             if(obrot < 0){
                 obrot *= -1;
+                if(obrot >= PELNYOBROT){
+                    obrot = obrot % PELNYOBROT;
+                    std::cout<<"Wartosc obrotu wieksza niz 360!"<<std::endl;
+                    std::cout<<"Dron obroci sie o kat % 360 : "<<-obrot<<std::endl<<std::endl;
+                }
+
                 for(int i = 0; i < obrot; i++){
 
                     (*scena).obrotDrona(-1);
@@ -90,7 +96,13 @@ bool otworzMenu(){
                     obslugaGNUplota(*po, *ko, Lacze);
                     usleep(SLEEP);
                 }
-            }else{ 
+            }else{
+                if(obrot >= PELNYOBROT){
+                    obrot = obrot % PELNYOBROT;
+                    std::cout<<"Wartosc obrotu wieksza niz 360!"<<std::endl;
+                    std::cout<<"Dron obroci sie o kat % 360 : "<<obrot<<std::endl<<std::endl;
+                }
+
                 for(int i = 0; i < obrot; i++){
 
                     (*scena).obrotDrona(1);

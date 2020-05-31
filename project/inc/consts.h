@@ -12,6 +12,7 @@
 #define KATPIONMIN -90
 #define JEDNOSTKOWA 1
 #define SLEEP 100000
+#define PELNYOBROT 360
 
 #define PROSTOPADLOSCIAN "bryly/prostopadloscian.dat"
 #define DNOIWODA "bryly/powierzchnie.dat"

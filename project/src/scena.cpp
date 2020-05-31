@@ -1,15 +1,14 @@
 #include "scena.hh"
+
 void Scena::aktualizujScene(Wektor3D& zakresP, Wektor3D& zakresK){
     zakresP = (*dron)[0]; zakresK = (*dron)[0];
     zakresP(0) -= 70; zakresP(1) -= 70;
     zakresK(0) += 70; zakresK(1) += 70;
-    woda = new Woda(zakresP, zakresK);
-    dno = new Dno(zakresP, zakresK);
+
+    std::shared_ptr<Woda> woda = std::make_shared<Woda>(zakresP, zakresK);
+    std::shared_ptr<Dno> dno = std::make_shared<Dno>(zakresP, zakresK);
 
     this->generujSceneDoPliku();
-
-    delete woda;
-    delete dno;
 }
 
 void Scena::ruchDronaNaWprost( int& katGoraDol, int& odleglosc){
