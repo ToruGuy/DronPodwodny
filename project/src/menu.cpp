@@ -57,7 +57,6 @@ bool otworzMenu(){
             std::cout<<std::endl<<std::endl;
             
             for(int i = 0; i < odleglosc; i++){
-                
                 (*scena).ruchDronaNaWprost(katGoraDol, przemieszczenie);
                 (*scena).aktualizujScene(*po, *ko);
                 obslugaGNUplota(*po, *ko, Lacze);

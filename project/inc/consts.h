@@ -15,8 +15,10 @@
 #define PELNYOBROT 360
 
 #define PROSTOPADLOSCIAN "bryly/prostopadloscian.dat"
+#define GRANIASTOLUP "bryly/graniastoslup-osY.dat"
 #define DNOIWODA "bryly/powierzchnie.dat"
 #define DRON "bryly/dron.dat"
 #define PLIKGNU "bryly/plikGNU.dat"
+
 
 #endif

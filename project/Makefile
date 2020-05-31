@@ -5,9 +5,9 @@ CXXFLAGS=-g -Iinc -Wall -pedantic -std=c++11
 
 TRGDIR=/tmp/dron-podwodny
 
-./dron-podwodny: obj obj/main.o obj/lacze_do_gnuplota.o obj/wektor3D.o obj/scena.o obj/woda.o obj/dno.o obj/powierzchnia.o obj/prostopadloscian.o obj/dron.o obj/menu.o obj/macierz3D.o
+./dron-podwodny: obj obj/main.o obj/lacze_do_gnuplota.o obj/wektor3D.o obj/scena.o obj/woda.o obj/dno.o obj/powierzchnia.o obj/prostopadloscian.o obj/dron.o obj/menu.o obj/macierz3D.o obj/graniastoslup.o
 	g++ -Wall -pedantic -std=c++11 -o ./dron-podwodny obj/main.o\
-                        obj/lacze_do_gnuplota.o obj/wektor3D.o obj/scena.o obj/woda.o obj/dno.o obj/powierzchnia.o obj/prostopadloscian.o obj/dron.o obj/menu.o obj/macierz3D.o
+                        obj/lacze_do_gnuplota.o obj/wektor3D.o obj/scena.o obj/woda.o obj/dno.o obj/powierzchnia.o obj/prostopadloscian.o obj/dron.o obj/menu.o obj/macierz3D.o obj/graniastoslup.o
 
 
 obj:
@@ -33,6 +33,9 @@ obj/dno.o: src/dno.cpp inc/dno.hh
 
 obj/dron.o: src/dron.cpp inc/dron.hh inc/prostopadloscian.hh
 	g++ -c ${CXXFLAGS} -o obj/dron.o src/dron.cpp
+
+obj/graniastoslup.o: src/graniastoslup.cpp inc/graniastoslup.hh
+	g++ -c ${CXXFLAGS} -o obj/graniastoslup.o src/graniastoslup.cpp
 
 obj/prostopadloscian.o: src/prostopadloscian.cpp inc/prostopadloscian.hh
 	g++ -c ${CXXFLAGS} -o obj/prostopadloscian.o src/prostopadloscian.cpp

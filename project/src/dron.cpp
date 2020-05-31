@@ -1,15 +1,40 @@
 #include "dron.hh"
 
 Dron::Dron(){
-    for(Wektor3D& elem : _wierzcholki){
-        _ukladGlobalny.push_back(elem);
+    int licznik;
+    Wektor3D tmp = Wektor3D(-5,0,0);
+    wirnikLewy = Graniastoslup(tmp);
+
+    tmp = Wektor3D(5,0,0);
+    wirnikPrawy = Graniastoslup(tmp);
+
+    licznik = prostopadloscian.ilosc();
+    for(int i = 0; i < licznik; i++ ){
+        _ukladGlobalny.push_back(prostopadloscian[i]);
+    }
+    
+    for(int i = licznik; i < wirnikLewy.ilosc()+licznik; i++ ){
+        _ukladGlobalny.push_back(wirnikLewy[i-licznik]);
+    }
+    
+    licznik += wirnikLewy.ilosc();
+    for(int i = licznik; i < wirnikPrawy.ilosc()+licznik; i++ ){
+        _ukladGlobalny.push_back(wirnikPrawy[i-licznik]);
     }
 }
 void Dron::powrotDoUkladuLok(){
-    int i = 0;
-    for(Wektor3D& elem : _wierzcholki){
-        _ukladGlobalny[i] = elem;
-        i++;
+    int licznik = prostopadloscian.ilosc();
+    for(int i = 0; i < licznik; i++ ){
+        _ukladGlobalny[i] = prostopadloscian[i];
+    }
+
+    for(int i = licznik; i < wirnikLewy.ilosc()+licznik; i++ ){
+        _ukladGlobalny[i] = wirnikLewy[i-licznik];
+    }
+
+    licznik += wirnikLewy.ilosc();
+    for(int i = licznik; i < wirnikPrawy.ilosc()+licznik; i++ ){
+        _ukladGlobalny[i] = wirnikLewy[i-licznik];
     }
 }
 
@@ -90,8 +115,14 @@ std::string Dron::generujDronaDoPliku(){
         if(i % 4 == 0){
             _napis += "\n";
         }
-    }_napis += "#\n\n";
-
+        if(i == 20){
+            _napis += "\n";
+        }
+        if(i == 48){
+            _napis += "\n";
+        }
+    }
+    
     Strm<<_napis;
     return _napis;
 }

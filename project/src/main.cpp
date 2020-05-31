@@ -5,12 +5,9 @@
 using namespace std;
 
 
-int main()
-{
-  char c;
- 
+int main(){ 
+
   system("clear");
   otworzMenu();
 
-  cin >> noskipws >> c;
 }

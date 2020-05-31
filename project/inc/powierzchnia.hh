@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <consts.h>
+#include <fstream>
 #include "wektor3D.hh"
 
 /**

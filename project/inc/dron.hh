@@ -2,6 +2,7 @@
 #define DRON_HH
 
 #include "prostopadloscian.hh"
+#include "graniastoslup.hh"
 #include "macierz3D.hh"
 #include <cmath>
 
@@ -9,7 +10,12 @@
  * Klasa modeluje pojecie drona, jako prostopadloscianu,
  * poruszajacego sie w ukladzie wspolrzednych.
  */
-class Dron:public Prostopadloscian{
+class Dron{
+    Prostopadloscian prostopadloscian;
+
+    Graniastoslup wirnikLewy;
+
+    Graniastoslup wirnikPrawy;
     /**
      * Kat pomiedzy ukladem lokalnym stalym a globalnym zmiennym.
      */
@@ -24,12 +30,16 @@ class Dron:public Prostopadloscian{
      * Zbior wektorow zawierajacych nowy, zmienny uklad globalny.
      */
     std::vector <Wektor3D> _ukladGlobalny;
+
+    std::string _napis = "";
 public:
     /**
      * Konstruktor bezparametryczny klasy dron.
      * Przypisuje _ukladGlobly wartosci ukladu lokalnego.
      */
     Dron();
+
+    //~Dron(){delete prostopadloscian;}
 
     /**
      * Przeciazenie operatora umozliwiajace wyswietlanie wartosci ukladu globalnego.
