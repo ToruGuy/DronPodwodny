@@ -3,10 +3,10 @@
 Dron::Dron(){
     int licznik;
     Wektor3D tmp = Wektor3D(-5,0,0);
-    wirnikLewy = Graniastoslup(tmp);
+    wirnikLewy = Wirnik(tmp);
 
     tmp = Wektor3D(5,0,0);
-    wirnikPrawy = Graniastoslup(tmp);
+    wirnikPrawy = Wirnik(tmp);
 
     licznik = prostopadloscian.ilosc();
     for(int i = 0; i < licznik; i++ ){
@@ -34,11 +34,12 @@ void Dron::powrotDoUkladuLok(){
 
     licznik += wirnikLewy.ilosc();
     for(int i = licznik; i < wirnikPrawy.ilosc()+licznik; i++ ){
-        _ukladGlobalny[i] = wirnikLewy[i-licznik];
+        _ukladGlobalny[i] = wirnikPrawy(i-licznik);
     }
 }
 
 void Dron::obrotWokolOZ(const double& kat){
+    wirnikPrawy.obracaj(1);
     katZmianyUkladu += kat;
     double katRad = katZmianyUkladu;
     katRad *= M_PI / 180;
@@ -58,6 +59,7 @@ void Dron::obrotWokolOZ(const double& kat){
 }
 
 void Dron::ruchNaWprost(const double& katGoraDol, const double& odleglosc){
+    wirnikPrawy.obracaj(5);
     double katPoziomRAD = katZmianyUkladu * M_PI / 180;
     double katPionRAD = katGoraDol * M_PI / 180;
     double katProsty = 90;
@@ -116,10 +118,10 @@ std::string Dron::generujDronaDoPliku(){
             _napis += "\n";
         }
         if(i == 20){
-            _napis += "\n";
+            _napis += "\n\n";
         }
         if(i == 48){
-            _napis += "\n";
+            _napis += "\n\n";
         }
     }
     

@@ -2,6 +2,7 @@
 #define DRON_HH
 
 #include "prostopadloscian.hh"
+#include "wirnik.hh"
 #include "graniastoslup.hh"
 #include "macierz3D.hh"
 #include <cmath>
@@ -13,9 +14,9 @@
 class Dron{
     Prostopadloscian prostopadloscian;
 
-    Graniastoslup wirnikLewy;
+    Wirnik wirnikLewy;
 
-    Graniastoslup wirnikPrawy;
+    Wirnik wirnikPrawy;
     /**
      * Kat pomiedzy ukladem lokalnym stalym a globalnym zmiennym.
      */
