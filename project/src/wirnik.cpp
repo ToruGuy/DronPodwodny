@@ -1,13 +1,14 @@
 #include "wirnik.hh"
-Wirnik::Wirnik(Wektor3D& wekPrzesuniecia):Graniastoslup(wekPrzesuniecia){
+Wirnik::Wirnik(Wektor3D& wekPrzesuniecia):Graniastoslup(){
+    wektorPrzesunieciaUkladu = wekPrzesuniecia;
     for(Wektor3D& elem : _wierzcholki){
-        _ukladGlobalny.push_back(elem);
+        _ukladGlobalny.push_back(elem + wektorPrzesunieciaUkladu);
     }
 }
 
 void Wirnik::powrotDoUkladuLok(){
-    for(int i = 0; i < int(_wierzcholki.size()); i++){
-        _ukladGlobalny[i] = _wierzcholki[i];
+    for(int i = 0; i < this->ilosc(); i++){
+        _ukladGlobalny[i] = (*this)[i];
     }
 }
 

@@ -54,6 +54,8 @@ public:
      */
     void powrotDoUkladuLok();
 
+    void aktualizujWirniki();
+
     /**
      * Wykonuje ruch drona wokol osi OZ.
      */

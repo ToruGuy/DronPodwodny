@@ -2,24 +2,27 @@
 
 Dron::Dron(){
     int licznik;
-    Wektor3D tmp = Wektor3D(-5,0,0);
+    Wektor3D tmp = Wektor3D(-5,0,-40);
     wirnikLewy = Wirnik(tmp);
 
-    tmp = Wektor3D(5,0,0);
+    tmp = Wektor3D(5,0,-40);
     wirnikPrawy = Wirnik(tmp);
 
     licznik = prostopadloscian.ilosc();
     for(int i = 0; i < licznik; i++ ){
+        //nawiasy [] odwołuja się do układu lokalnego prostopadloscianu
         _ukladGlobalny.push_back(prostopadloscian[i]);
     }
     
     for(int i = licznik; i < wirnikLewy.ilosc()+licznik; i++ ){
-        _ukladGlobalny.push_back(wirnikLewy[i-licznik]);
+        //nawiasy () odwołuja się do układu globalnego wirnika Lewy
+        _ukladGlobalny.push_back(wirnikLewy(i-licznik)); 
     }
     
     licznik += wirnikLewy.ilosc();
     for(int i = licznik; i < wirnikPrawy.ilosc()+licznik; i++ ){
-        _ukladGlobalny.push_back(wirnikPrawy[i-licznik]);
+        //nawiasy () odwołuja się do układu globalnego wirnika Prawy
+        _ukladGlobalny.push_back(wirnikPrawy(i-licznik));
     }
 }
 void Dron::powrotDoUkladuLok(){
@@ -29,7 +32,7 @@ void Dron::powrotDoUkladuLok(){
     }
 
     for(int i = licznik; i < wirnikLewy.ilosc()+licznik; i++ ){
-        _ukladGlobalny[i] = wirnikLewy[i-licznik];
+        _ukladGlobalny[i] = wirnikLewy(i-licznik);
     }
 
     licznik += wirnikLewy.ilosc();
@@ -38,8 +41,21 @@ void Dron::powrotDoUkladuLok(){
     }
 }
 
+void Dron::aktualizujWirniki(){
+    int licznik = prostopadloscian.ilosc();
+
+    for(int i = licznik; i < wirnikLewy.ilosc()+licznik; i++ ){
+        _ukladGlobalny[i] = wirnikLewy(i-licznik)+wektorPrzesunieciaUkladu;
+    }
+
+    licznik += wirnikLewy.ilosc();
+    for(int i = licznik; i < wirnikPrawy.ilosc()+licznik; i++ ){
+        _ukladGlobalny[i] = wirnikPrawy(i-licznik)+wektorPrzesunieciaUkladu;
+    }
+}
+
 void Dron::obrotWokolOZ(const double& kat){
-    wirnikPrawy.obracaj(1);
+    
     katZmianyUkladu += kat;
     double katRad = katZmianyUkladu;
     katRad *= M_PI / 180;
@@ -50,16 +66,19 @@ void Dron::obrotWokolOZ(const double& kat){
     Macierz3D macierzZmian = Macierz3D(wekDoMacierzy[0], wekDoMacierzy[1], wekDoMacierzy[2]);
 
     
-    //wraca do poczatkowego ukladu wspolzednych
     (*this).powrotDoUkladuLok();
     for(Wektor3D& elem : _ukladGlobalny){
         elem = macierzZmian * elem;
         elem = elem + wektorPrzesunieciaUkladu;
     }
+
+    wirnikPrawy.obracaj(20);
+    wirnikLewy.obracaj(-20);
+   
 }
 
 void Dron::ruchNaWprost(const double& katGoraDol, const double& odleglosc){
-    wirnikPrawy.obracaj(5);
+
     double katPoziomRAD = katZmianyUkladu * M_PI / 180;
     double katPionRAD = katGoraDol * M_PI / 180;
     double katProsty = 90;
@@ -68,9 +87,15 @@ void Dron::ruchNaWprost(const double& katGoraDol, const double& odleglosc){
     Wektor3D tmp = Wektor3D(odleglosc*(-sin(katPoziomRAD))*sin(katProsty - katPionRAD), odleglosc*cos(katPoziomRAD)*sin(katProsty - katPionRAD), odleglosc*sin(katPionRAD));
     wektorPrzesunieciaUkladu = wektorPrzesunieciaUkladu + tmp;
 
+    wirnikPrawy.obracaj(20);
+    wirnikLewy.obracaj(-20);
+    this->aktualizujWirniki();
     for(Wektor3D& elem : _ukladGlobalny){
         elem = elem + tmp;
     }
+    
+    
+    
 }
 
 bool Dron::wykrywanieKolizjiZDnem(){
