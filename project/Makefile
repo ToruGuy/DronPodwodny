@@ -5,9 +5,17 @@ CXXFLAGS=-g -Iinc -Wall -pedantic -std=c++11
 
 TRGDIR=/tmp/dron-podwodny
 
-./dron-podwodny: obj obj/main.o obj/lacze_do_gnuplota.o obj/wektor3D.o obj/scena.o obj/woda.o obj/dno.o obj/powierzchnia.o obj/prostopadloscian.o obj/dron.o obj/menu.o obj/macierz3D.o obj/graniastoslup.o obj/wirnik.o
+./dron-podwodny: obj obj/main.o\
+						obj/lacze_do_gnuplota.o obj/wektor3D.o obj/scena.o obj/woda.o\
+						obj/dno.o obj/powierzchnia.o obj/prostopadloscian.o obj/dron.o\
+						obj/menu.o obj/macierz3D.o obj/graniastoslup.o obj/wirnik.o\
+						obj/przeszkoda.o obj/sciana.o obj/pret.o obj/blok.o
+
 	g++ -Wall -pedantic -std=c++11 -o ./dron-podwodny obj/main.o\
-                        obj/lacze_do_gnuplota.o obj/wektor3D.o obj/scena.o obj/woda.o obj/dno.o obj/powierzchnia.o obj/prostopadloscian.o obj/dron.o obj/menu.o obj/macierz3D.o obj/graniastoslup.o obj/wirnik.o
+                        obj/lacze_do_gnuplota.o obj/wektor3D.o obj/scena.o obj/woda.o\
+						obj/dno.o obj/powierzchnia.o obj/prostopadloscian.o obj/dron.o\
+						obj/menu.o obj/macierz3D.o obj/graniastoslup.o obj/wirnik.o\
+						obj/przeszkoda.o obj/sciana.o obj/pret.o obj/blok.o
 
 
 obj:
@@ -42,6 +50,18 @@ obj/graniastoslup.o: src/graniastoslup.cpp inc/graniastoslup.hh
 
 obj/prostopadloscian.o: src/prostopadloscian.cpp inc/prostopadloscian.hh
 	g++ -c ${CXXFLAGS} -o obj/prostopadloscian.o src/prostopadloscian.cpp
+
+obj/sciana.o: src/sciana.cpp inc/sciana.hh
+	g++ -c ${CXXFLAGS} -o obj/sciana.o src/sciana.cpp
+
+obj/pret.o: src/pret.cpp inc/pret.hh
+	g++ -c ${CXXFLAGS} -o obj/pret.o src/pret.cpp
+
+obj/blok.o: src/blok.cpp inc/blok.hh
+	g++ -c ${CXXFLAGS} -o obj/blok.o src/blok.cpp
+
+obj/przeszkoda.o: src/przeszkoda.cpp inc/przeszkoda.hh
+	g++ -c ${CXXFLAGS} -o obj/przeszkoda.o src/przeszkoda.cpp
 
 obj/powierzchnia.o: src/powierzchnia.cpp inc/powierzchnia.hh inc/wektor3D.hh inc/consts.h
 	g++ -c ${CXXFLAGS} -o obj/powierzchnia.o src/powierzchnia.cpp

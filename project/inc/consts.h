@@ -13,12 +13,17 @@
 #define JEDNOSTKOWA 1
 #define SLEEP 100000
 #define PELNYOBROT 360
+#define OBLEWYW -20
+#define OBRPRAWYW 20
 
 #define PROSTOPADLOSCIAN "bryly/prostopadloscian.dat"
 #define GRANIASTOLUP "bryly/graniastoslup-osZ.dat"
 #define DNOIWODA "bryly/powierzchnie.dat"
 #define DRON "bryly/dron.dat"
 #define PLIKGNU "bryly/plikGNU.dat"
+#define SCIANA "bryly/sciana.dat"
+#define PRET "bryly/pret.dat"
+#define BLOK "bryly/blok.dat"
 
 
 #endif

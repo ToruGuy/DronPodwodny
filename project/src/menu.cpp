@@ -57,7 +57,21 @@ bool otworzMenu(){
             std::cout<<std::endl<<std::endl;
             
             for(int i = 0; i < odleglosc; i++){
-                (*scena).ruchDronaNaWprost(katGoraDol, przemieszczenie);
+                (*scena).droN().ruchNaWprost(katGoraDol, przemieszczenie);
+                (*scena).droN().generujDronaDoPliku();
+
+                //podczas kontatku z dnem program konczy dzialanie 
+                if((*scena).droN().wykrywanieKolizjiZDnem()){
+                    przemieszczenie = 1;
+                    katGoraDol < 0 ? katGoraDol = 90:0;
+                }
+
+                //podczas kontaktu z powierzchnia wody dron ma uniemozliwione dalsze wznoszenie sie
+                if((*scena).droN().wykrywanieKolizjiZWoda()){
+                    katGoraDol == 90 ? odleglosc = 0:0;
+                    katGoraDol>0 ? katGoraDol = 0:0;
+                }
+
                 (*scena).aktualizujScene(*po, *ko);
                 obslugaGNUplota(*po, *ko, Lacze);
                 usleep(SLEEP);
@@ -89,8 +103,11 @@ bool otworzMenu(){
                 }
 
                 for(int i = 0; i < obrot; i++){
-
-                    (*scena).obrotDrona(-1);
+                    
+                    (*scena).droN().obrotWokolOZ(-1);
+                    (*scena).droN().generujDronaDoPliku();
+                    (*scena).generujSceneDoPliku();
+                
                     (*scena).aktualizujScene(*po, *ko);
                     obslugaGNUplota(*po, *ko, Lacze);
                     usleep(SLEEP);
@@ -103,8 +120,11 @@ bool otworzMenu(){
                 }
 
                 for(int i = 0; i < obrot; i++){
+                    
+                    (*scena).droN().obrotWokolOZ(1);
+                    (*scena).droN().generujDronaDoPliku();
+                    (*scena).generujSceneDoPliku();
 
-                    (*scena).obrotDrona(1);
                     (*scena).aktualizujScene(*po, *ko);
                     obslugaGNUplota(*po, *ko, Lacze);
                     usleep(SLEEP);

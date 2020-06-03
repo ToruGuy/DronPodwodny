@@ -3,6 +3,9 @@
 #include "woda.hh"
 #include "dno.hh"
 #include "dron.hh"
+#include "sciana.hh"
+#include "pret.hh"
+#include "blok.hh"
 #include <memory>
 #include <string>
 #include <fstream>
@@ -22,7 +25,13 @@ class Scena{
      */
     Woda *woda;
 
-    Dron *dron;
+    Dron dron;
+
+    Sciana *sciana;
+
+    Pret *pret;
+
+    Blok *blok;
 
     /**
      * Pole zawierajace string utworzonej sceny.
@@ -36,20 +45,18 @@ public:
      * @param[in] poczatek - wektorowy poczatek zakresu
      * @param[in] koniec - wektorowy koniec zakresu 
      */
-    Scena(Wektor3D& zakresP, Wektor3D& zakresK){woda = new Woda(zakresP, zakresK);dno = new Dno(zakresP, zakresK); dron = new Dron();}
+    Scena(Wektor3D& zakresP, Wektor3D& zakresK){woda = new Woda(zakresP, zakresK);dno = new Dno(zakresP, zakresK); blok = new Blok();}
     
     /**
      * Destruktor sceny
      */
-    ~Scena(){delete woda; delete dno; delete dron;}
+    ~Scena(){delete woda; delete dno; delete blok;}
 
-    Wektor3D polozenieDrona()const{return (*dron)[0];}
+    Dron& droN(){return dron;}
+
+    //Wektor3D polozenieDrona()const{return (*dron)[0];}
 
     void aktualizujScene(Wektor3D& zakresP, Wektor3D& zakresK);
-
-    void ruchDronaNaWprost(int& katGoraDol, int& odleglosc);
-
-    void obrotDrona(const double& obrot);
 
     /**
      * Funkcja generujuje wartosci dna oraz wody, po czym zwraca je do pliku

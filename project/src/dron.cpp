@@ -2,9 +2,11 @@
 
 Dron::Dron(){
     int licznik;
-    Wektor3D tmp = Wektor3D(-5,0,-40);
+    //Przesuniecie wirniki do drona
+    Wektor3D tmp = Wektor3D(-5,0,-40); 
     wirnikLewy = Wirnik(tmp);
 
+    //Przesuniecie wirniki do drona
     tmp = Wektor3D(5,0,-40);
     wirnikPrawy = Wirnik(tmp);
 
@@ -87,8 +89,8 @@ void Dron::obrotWokolOZ(const double& kat){
         elem = elem + wektorPrzesunieciaUkladu;
     }
 
-    wirnikPrawy.obracaj(20);
-    wirnikLewy.obracaj(-20);
+    wirnikPrawy.obracaj(OBRPRAWYW);
+    wirnikLewy.obracaj(OBLEWYW);
    
 }
 
@@ -102,15 +104,15 @@ void Dron::ruchNaWprost(const double& katGoraDol, const double& odleglosc){
     Wektor3D tmp = Wektor3D(odleglosc*(-sin(katPoziomRAD))*sin(katProsty - katPionRAD), odleglosc*cos(katPoziomRAD)*sin(katProsty - katPionRAD), odleglosc*sin(katPionRAD));
     wektorPrzesunieciaUkladu = wektorPrzesunieciaUkladu + tmp;
 
-    wirnikPrawy.obracaj(20);
-    wirnikLewy.obracaj(-20);
+    //Obraca wirniki oraz aktualizuje ich polozenie
+    wirnikPrawy.obracaj(OBRPRAWYW);
+    wirnikLewy.obracaj(OBLEWYW);
     this->aktualizujWirniki();
+
+    //Przesuwa drona
     for(int i = 0; i < prostopadloscian.ilosc(); i++ ){
         _ukladGlobalny[i] = _ukladGlobalny[i] + tmp;
     }
-    
-    
-    
 }
 
 bool Dron::wykrywanieKolizjiZDnem(){

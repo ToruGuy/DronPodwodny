@@ -1,6 +1,6 @@
 #include "scena.hh"
 void Scena::aktualizujScene(Wektor3D& zakresP, Wektor3D& zakresK){
-    zakresP = (*dron)[0]; zakresK = (*dron)[0];
+    zakresP = dron[0]; zakresK = dron[0];
     zakresP(0) -= 70; zakresP(1) -= 70;
     zakresK(0) += 70; zakresK(1) += 70;
 
@@ -12,7 +12,7 @@ void Scena::aktualizujScene(Wektor3D& zakresP, Wektor3D& zakresK){
 
     this->generujSceneDoPliku();
 }
-
+/*
 void Scena::ruchDronaNaWprost( int& katGoraDol, int& odleglosc){
 
     (*dron).ruchNaWprost(katGoraDol, odleglosc);
@@ -36,7 +36,7 @@ void Scena::obrotDrona(const double& obrot){
     (*dron).obrotWokolOZ(obrot);
     (*dron).generujDronaDoPliku();
     this->generujSceneDoPliku();
-}
+}*/
 
 std::string Scena::generujSceneDoPliku(){    
     std::ofstream Strm(PLIKGNU);
@@ -49,7 +49,9 @@ std::string Scena::generujSceneDoPliku(){
     _napis += "#\n\n";
     _napis += (*this).dno->napis();
     _napis += "#\n\n";
-    _napis += (*this).dron->napis();
+    _napis += (*this).dron.napis();
+    _napis += "#\n\n";
+    _napis += (*this).blok->napis();
     _napis += "#\n\n";
 
     Strm<<_napis;
