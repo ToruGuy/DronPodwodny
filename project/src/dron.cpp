@@ -45,13 +45,28 @@ void Dron::aktualizujWirniki(){
     int licznik = prostopadloscian.ilosc();
 
     for(int i = licznik; i < wirnikLewy.ilosc()+licznik; i++ ){
-        _ukladGlobalny[i] = wirnikLewy(i-licznik)+wektorPrzesunieciaUkladu;
+        _ukladGlobalny[i] = wirnikLewy(i-licznik);
     }
 
     licznik += wirnikLewy.ilosc();
     for(int i = licznik; i < wirnikPrawy.ilosc()+licznik; i++ ){
-        _ukladGlobalny[i] = wirnikPrawy(i-licznik)+wektorPrzesunieciaUkladu;
+        _ukladGlobalny[i] = wirnikPrawy(i-licznik);
     }
+
+    double katRad = katZmianyUkladu;
+    katRad *= M_PI / 180;
+    Wektor3D wekDoMacierzy[3];
+    wekDoMacierzy[0] = Wektor3D(cos(katRad), sin(katRad), 0);
+    wekDoMacierzy[1] = Wektor3D(-sin(katRad), cos(katRad), 0);
+    wekDoMacierzy[2] = Wektor3D(0, 0, 1);
+    Macierz3D macierzZmian = Macierz3D(wekDoMacierzy[0], wekDoMacierzy[1], wekDoMacierzy[2]);
+
+    licznik = prostopadloscian.ilosc();
+    for(int i = licznik; i < wirnikPrawy.ilosc()+licznik+wirnikLewy.ilosc(); i++ ){
+        _ukladGlobalny[i] = macierzZmian * _ukladGlobalny[i];
+        _ukladGlobalny[i] = _ukladGlobalny[i] + wektorPrzesunieciaUkladu;
+    }
+
 }
 
 void Dron::obrotWokolOZ(const double& kat){
@@ -90,8 +105,8 @@ void Dron::ruchNaWprost(const double& katGoraDol, const double& odleglosc){
     wirnikPrawy.obracaj(20);
     wirnikLewy.obracaj(-20);
     this->aktualizujWirniki();
-    for(Wektor3D& elem : _ukladGlobalny){
-        elem = elem + tmp;
+    for(int i = 0; i < prostopadloscian.ilosc(); i++ ){
+        _ukladGlobalny[i] = _ukladGlobalny[i] + tmp;
     }
     
     
