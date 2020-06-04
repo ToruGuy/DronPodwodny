@@ -118,20 +118,20 @@ void Dron::ruchNaWprost(const double& katGoraDol, const double& odleglosc){
 void Dron::kolizjaObiekt(Wektor3D& zPoczatekOb, Wektor3D& zKoniecOb){
     int licznik = 0;
     //dla x                                                                                                                                                                                                 5 -5 -30 koniec    -5 5 40 poczatek                             
-    if((zPoczatekOb(0)<= this->zakresKonca()(0) && this->zakresPoczatku()(0) <= zKoniecOb(0)) || (zPoczatekOb(0)<= this->zakresPoczatku()(0) && this->zakresKonca()(0) <= zKoniecOb(0))||\
-    ((zPoczatekOb(0)<= (*this)[6](0) && (*this)[14](0) <= zKoniecOb(0)) || (zPoczatekOb(0)<= (*this)[14](0) && (*this)[6](0) <= zKoniecOb(0)))){
+    if((zPoczatekOb(0)<= (*this)[6](0) && (*this)[13](0) <= zKoniecOb(0)) || (zPoczatekOb(0)<= (*this)[13](0) && (*this)[6](0) <= zKoniecOb(0))||\
+    ((zPoczatekOb(0)<= (*this)[5](0) && (*this)[14](0) <= zKoniecOb(0)) || (zPoczatekOb(0)<= (*this)[14](0) && (*this)[5](0) <= zKoniecOb(0)))){
         licznik++;
         //std::cout<<"X"<<std::endl;
     }
     //dla y
-    if((zPoczatekOb(1)<= this->zakresKonca()(1) && this->zakresPoczatku()(1) <= zKoniecOb(1)) || (zPoczatekOb(1)<= this->zakresPoczatku()(1) && this->zakresKonca()(1) <= zKoniecOb(1)) ||\
-    ( (zPoczatekOb(1)<= (*this)[6](1) && (*this)[14](1) <= zKoniecOb(1)) || (zPoczatekOb(1)<= (*this)[14](1) && (*this)[6](1) <= zKoniecOb(1))) ){
+    if((zPoczatekOb(1)<= (*this)[6](1) && (*this)[13](1) <= zKoniecOb(1)) || (zPoczatekOb(1)<= (*this)[13](1) && (*this)[6](1) <= zKoniecOb(1)) ||\
+    ( (zPoczatekOb(1)<= (*this)[5](1) && (*this)[14](1) <= zKoniecOb(1)) || (zPoczatekOb(1)<= (*this)[14](1) && (*this)[5](1) <= zKoniecOb(1))) ){
         licznik++;
         //std::cout<<"Y"<<std::endl;
     }
     //dla z
-    if((zPoczatekOb(2)<= this->zakresKonca()(2) && this->zakresPoczatku()(2) <= zKoniecOb(2)) || (zPoczatekOb(2)<= this->zakresPoczatku()(2) && this->zakresKonca()(2) <= zKoniecOb(2)) ||\
-    ( (zPoczatekOb(2)<= (*this)[6](2) && (*this)[14](2) <= zKoniecOb(2)) || (zPoczatekOb(2)<= (*this)[14](2) && (*this)[6](2) <= zKoniecOb(2)))){
+    if((zPoczatekOb(2)<= (*this)[6](2) && (*this)[13](2) <= zKoniecOb(2)) || (zPoczatekOb(2)<= (*this)[13](2) && (*this)[6](2) <= zKoniecOb(2)) ||\
+    ( (zPoczatekOb(2)<= (*this)[5](2) && (*this)[14](2) <= zKoniecOb(2)) || (zPoczatekOb(2)<= (*this)[14](2) && (*this)[5](2) <= zKoniecOb(2)))){
         licznik++;
         //std::cout<<"Z"<<std::endl;
     }
