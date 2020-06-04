@@ -64,7 +64,7 @@ public:
      */
     void ruchNaWprost(const double& katGoraDol, const double& odleglosc);
 
-    void kolizjaObiekt(Wektor3D& zPoczatekOb, Wektor3D& zKoniecOb);
+    bool kolizjaObiekt(Wektor3D& zPoczatekOb, Wektor3D& zKoniecOb);
 
     /**
      * Wykrywa kolizje z dnem, jesli takowa nastapi zwraca true.

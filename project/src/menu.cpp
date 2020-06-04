@@ -8,7 +8,8 @@ void wypiszOpcje(){
 bool otworzMenu(){
     PzG::LaczeDoGNUPlota Lacze;
     char wpisanyZnak;
-    int przemieszczenie = 1;
+    int przemJednostkowe = 1;
+    bool kolizja = false;
     Wektor3D *po =new Wektor3D(-40, -40, 0);
     Wektor3D *ko =new Wektor3D(100, 100, 100);
 
@@ -18,7 +19,7 @@ bool otworzMenu(){
     Lacze.Inicjalizuj();  // Tutaj startuje gnuplot.
 
     while(wpisanyZnak != 'k'){
-        przemieszczenie = JEDNOSTKOWA;
+        przemJednostkowe = JEDNOSTKOWA;
         std::cout<<"Twoj wybor, m - menu > ";
         std::cin>>wpisanyZnak;
         if(std::cin.fail()){
@@ -55,33 +56,45 @@ bool otworzMenu(){
                 return false;
             }
             std::cout<<std::endl<<std::endl;
-            
+
+            kolizja = false;
             for(int i = 0; i < odleglosc; i++){
-                (*scena).droN().ruchNaWprost(katGoraDol, przemieszczenie);
-                (*scena).droN().generujDronaDoPliku();
+                (*scena).droN().ruchNaWprost(katGoraDol, przemJednostkowe);
                 
                 for(Przeszkoda& elem : (*scena).listaPrzeszkod()){
-                    (*scena).droN().kolizjaObiekt(elem.zakresPoczatku(), elem.zakresKonca());
-                    
+                    if((*scena).droN().kolizjaObiekt(elem.zakresPoczatku(), elem.zakresKonca())){
+                        kolizja = true;
+                        break;
+                    }
                 }
-                //(*scena).droN().kolizjaObiekt((*scena).bloK().zakresPoczatku(),(*scena).bloK().zakresPoczatku());
+            }(*scena).droN().ruchNaWprost(katGoraDol, -odleglosc);
+            
+            if(!kolizja){
+                for(int i = 0; i < odleglosc; i++){
+                    (*scena).droN().ruchNaWprost(katGoraDol, przemJednostkowe);
+                    (*scena).droN().generujDronaDoPliku();
 
-                //podczas kontatku z dnem program konczy dzialanie 
-                if((*scena).droN().wykrywanieKolizjiZDnem()){
-                    przemieszczenie = 1;
-                    katGoraDol < 0 ? katGoraDol = 90:0;
+                    //podczas kontatku z dnem program konczy dzialanie 
+                    if((*scena).droN().wykrywanieKolizjiZDnem()){
+                        przemJednostkowe = 1;
+                        katGoraDol < 0 ? katGoraDol = 90:0;
+                    }
+
+                    //podczas kontaktu z powierzchnia wody dron ma uniemozliwione dalsze wznoszenie sie
+                    if((*scena).droN().wykrywanieKolizjiZWoda()){
+                        katGoraDol == 90 ? odleglosc = 0:0;
+                        katGoraDol>0 ? katGoraDol = 0:0;
+                    }
+
+                    (*scena).aktualizujScene(*po, *ko);
+                    obslugaGNUplota(*po, *ko, Lacze);
+                    usleep(SLEEP);
                 }
-
-                //podczas kontaktu z powierzchnia wody dron ma uniemozliwione dalsze wznoszenie sie
-                if((*scena).droN().wykrywanieKolizjiZWoda()){
-                    katGoraDol == 90 ? odleglosc = 0:0;
-                    katGoraDol>0 ? katGoraDol = 0:0;
-                }
-
-                (*scena).aktualizujScene(*po, *ko);
-                obslugaGNUplota(*po, *ko, Lacze);
-                usleep(SLEEP);
+            }else{
+                std::cout<<"Podczas zadanej drogi nastapilaby kolizja!"<<std::endl;
+                std::cout<<"Zadaj inny ruch."<<std::endl<<std::endl;
             }
+            
             
             
             std::cout<<"Aktualna ilosc obiektow Wektor3D> "<<(*po).ileTeraz()<<std::endl;

@@ -115,8 +115,10 @@ void Dron::ruchNaWprost(const double& katGoraDol, const double& odleglosc){
     }
 }
 
-void Dron::kolizjaObiekt(Wektor3D& zPoczatekOb, Wektor3D& zKoniecOb){
+bool Dron::kolizjaObiekt(Wektor3D& zPoczatekOb, Wektor3D& zKoniecOb){
     int licznik = 0;
+    //(*this)[5](0) - (*this)[14](0) pierwsza przekatna
+    //(*this)[6](0) - (*this)[13](0) druga przekatna
     //dla x                                                                                                                                                                                                 5 -5 -30 koniec    -5 5 40 poczatek                             
     if((zPoczatekOb(0)<= (*this)[6](0) && (*this)[13](0) <= zKoniecOb(0)) || (zPoczatekOb(0)<= (*this)[13](0) && (*this)[6](0) <= zKoniecOb(0))||\
     ((zPoczatekOb(0)<= (*this)[5](0) && (*this)[14](0) <= zKoniecOb(0)) || (zPoczatekOb(0)<= (*this)[14](0) && (*this)[5](0) <= zKoniecOb(0)))){
@@ -135,10 +137,7 @@ void Dron::kolizjaObiekt(Wektor3D& zPoczatekOb, Wektor3D& zKoniecOb){
         licznik++;
         //std::cout<<"Z"<<std::endl;
     }
-    if(licznik == 3){
-        std::cout<<"kolizja!"<<std::endl;
-    }
-    std::cout<<std::endl;
+    return licznik == 3;
     
     
     /*if(((*this).zakresKonca() <= zKoniecOb && (*this).zakresKonca() >= zPoczatekOb)||((*this).zakresPoczatku() <= zKoniecOb && (*this).zakresPoczatku() >= zPoczatekOb)){

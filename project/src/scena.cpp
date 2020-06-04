@@ -7,7 +7,7 @@ Scena::Scena(Wektor3D& zakresP, Wektor3D& zakresK){
     std::shared_ptr<Blok> blok = std::make_shared<Blok>(tmp);
     przeszkody.push_back((*blok));
     
-    tmp = Wektor3D(0,0,0);
+    tmp = Wektor3D(-10,15,0);
     std::shared_ptr<Sciana> sciana = std::make_shared<Sciana>(tmp);
     przeszkody.push_back((*sciana));
 
