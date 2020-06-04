@@ -24,7 +24,7 @@ obj:
 obj/lacze_do_gnuplota.o: inc/lacze_do_gnuplota.hh src/lacze_do_gnuplota.cpp
 	g++ -c ${CXXFLAGS} -o obj/lacze_do_gnuplota.o src/lacze_do_gnuplota.cpp
 
-obj/main.o: src/main.cpp inc/menu.hh
+obj/main.o: src/main.cpp 
 	g++ -c ${CXXFLAGS} -o obj/main.o src/main.cpp
 
 obj/menu.o: src/menu.cpp inc/menu.hh inc/lacze_do_gnuplota.hh inc/scena.hh inc/dron.hh

@@ -61,6 +61,9 @@ class Wektor {
      */
     Wektor<STyp,SWymiar> operator / (STyp const &dzielnik) const;
 
+    bool operator >= (const Wektor<STyp,SWymiar> &wek) const;
+
+    bool operator <= (const Wektor<STyp,SWymiar> &wek) const;
     /**
      * Metoda oblicza dlugosc wektora bledu dla double.
      * 
@@ -148,6 +151,28 @@ Wektor<STyp,SWymiar> Wektor<STyp,SWymiar>::operator / (STyp const &dzielnik) con
         wynik(i) = _wsp[i] / dzielnik;
     }
     return wynik;
+}
+
+template <typename STyp, int SWymiar>
+bool Wektor<STyp,SWymiar>::operator >= (const Wektor<STyp,SWymiar> &wek) const{
+  int licznik = 0;
+  for(int i = 0; i < SWymiar; i++){
+    if((*this)(i) >= wek(i)){
+      licznik++;
+    }
+  }
+  return licznik == SWymiar;
+}
+
+template <typename STyp, int SWymiar>
+bool Wektor<STyp,SWymiar>::operator <= (const Wektor<STyp,SWymiar> &wek) const{
+  int licznik = 0;
+  for(int i = 0; i < SWymiar; i++){
+    if((*this)(i) <= wek(i)){
+      licznik++;
+    }
+  }
+  return licznik == SWymiar;
 }
 
 /**

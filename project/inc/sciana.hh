@@ -5,6 +5,6 @@
 
 class Sciana:public Przeszkoda{
 public:
-    Sciana();
+    Sciana(Wektor3D& wekPrzesuniecia);
 };
 #endif

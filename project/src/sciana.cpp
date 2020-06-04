@@ -1,5 +1,5 @@
 #include "sciana.hh"
-Sciana::Sciana(){
+Sciana::Sciana(Wektor3D& wekPrzesuniecia){
     Wektor3D tmp;
     int i = 0;
 
@@ -8,6 +8,7 @@ Sciana::Sciana(){
 
     while(!Strm.eof()){
         Strm>>tmp;
+        tmp = tmp + wekPrzesuniecia;
         i++;
 
         _wierzcholki.push_back(tmp);

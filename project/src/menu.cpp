@@ -59,6 +59,12 @@ bool otworzMenu(){
             for(int i = 0; i < odleglosc; i++){
                 (*scena).droN().ruchNaWprost(katGoraDol, przemieszczenie);
                 (*scena).droN().generujDronaDoPliku();
+                
+                for(Przeszkoda& elem : (*scena).listaPrzeszkod()){
+                    (*scena).droN().kolizjaObiekt(elem.zakresPoczatku(), elem.zakresKonca());
+                    
+                }
+                //(*scena).droN().kolizjaObiekt((*scena).bloK().zakresPoczatku(),(*scena).bloK().zakresPoczatku());
 
                 //podczas kontatku z dnem program konczy dzialanie 
                 if((*scena).droN().wykrywanieKolizjiZDnem()){

@@ -10,6 +10,7 @@
 #include <string>
 #include <fstream>
 #include <cstdlib>
+#include <list>
 
 /**
  * Klasa laczy obiekty graficzne otaczajace drona.
@@ -27,12 +28,7 @@ class Scena{
 
     Dron dron;
 
-    Sciana *sciana;
-
-    Pret *pret;
-
-    Blok *blok;
-
+    std::list<Przeszkoda> przeszkody;
     /**
      * Pole zawierajace string utworzonej sceny.
      */
@@ -45,16 +41,16 @@ public:
      * @param[in] poczatek - wektorowy poczatek zakresu
      * @param[in] koniec - wektorowy koniec zakresu 
      */
-    Scena(Wektor3D& zakresP, Wektor3D& zakresK){woda = new Woda(zakresP, zakresK);dno = new Dno(zakresP, zakresK); blok = new Blok();}
+    Scena(Wektor3D& zakresP, Wektor3D& zakresK);
     
     /**
      * Destruktor sceny
      */
-    ~Scena(){delete woda; delete dno; delete blok;}
+    ~Scena(){delete woda; delete dno; }
 
     Dron& droN(){return dron;}
 
-    //Wektor3D polozenieDrona()const{return (*dron)[0];}
+    std::list<Przeszkoda>& listaPrzeszkod(){return przeszkody;}
 
     void aktualizujScene(Wektor3D& zakresP, Wektor3D& zakresK);
 

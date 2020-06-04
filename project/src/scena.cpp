@@ -1,6 +1,24 @@
 #include "scena.hh"
+Scena::Scena(Wektor3D& zakresP, Wektor3D& zakresK){
+    woda = new Woda(zakresP, zakresK);
+    dno = new Dno(zakresP, zakresK); 
+    Wektor3D tmp = Wektor3D(7,20,0); 
+    
+    std::shared_ptr<Blok> blok = std::make_shared<Blok>(tmp);
+    przeszkody.push_back((*blok));
+    
+    tmp = Wektor3D(0,0,0);
+    std::shared_ptr<Sciana> sciana = std::make_shared<Sciana>(tmp);
+    przeszkody.push_back((*sciana));
+
+    tmp = Wektor3D(-5,-20,0);
+    std::shared_ptr<Pret> pret = std::make_shared<Pret>(tmp);
+    przeszkody.push_back((*pret));
+}
 void Scena::aktualizujScene(Wektor3D& zakresP, Wektor3D& zakresK){
     zakresP = dron[0]; zakresK = dron[0];
+    
+    //zakresy za oraz przed dronem
     zakresP(0) -= 70; zakresP(1) -= 70;
     zakresK(0) += 70; zakresK(1) += 70;
 
@@ -12,31 +30,6 @@ void Scena::aktualizujScene(Wektor3D& zakresP, Wektor3D& zakresK){
 
     this->generujSceneDoPliku();
 }
-/*
-void Scena::ruchDronaNaWprost( int& katGoraDol, int& odleglosc){
-
-    (*dron).ruchNaWprost(katGoraDol, odleglosc);
-    (*dron).generujDronaDoPliku();
-    
-    //podczas kontatku z dnem program konczy dzialanie 
-    if((*dron).wykrywanieKolizjiZDnem()){
-        odleglosc = 1;
-        katGoraDol < 0 ? katGoraDol = 90:0;
-    }
-
-    //podczas kontaktu z powierzchnia wody dron ma uniemozliwione dalsze wznoszenie sie
-    if((*dron).wykrywanieKolizjiZWoda()){
-        katGoraDol == 90 ? odleglosc = 0:0;
-        katGoraDol>0 ? katGoraDol = 0:0;
-    }
-}
-
-void Scena::obrotDrona(const double& obrot){
-    
-    (*dron).obrotWokolOZ(obrot);
-    (*dron).generujDronaDoPliku();
-    this->generujSceneDoPliku();
-}*/
 
 std::string Scena::generujSceneDoPliku(){    
     std::ofstream Strm(PLIKGNU);
@@ -51,8 +44,11 @@ std::string Scena::generujSceneDoPliku(){
     _napis += "#\n\n";
     _napis += (*this).dron.napis();
     _napis += "#\n\n";
-    _napis += (*this).blok->napis();
-    _napis += "#\n\n";
+    for(Przeszkoda& elem : przeszkody){
+        _napis += elem.napis();
+        _napis += "#\n\n";
+    }
+    
 
     Strm<<_napis;
     return _napis;

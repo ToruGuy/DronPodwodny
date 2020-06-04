@@ -11,7 +11,10 @@
  * Jest to najmniejszy element graficzny. 
  */
 class Powierzchnia{
+    Wektor3D zPoczatku;
+    Wektor3D zKonca;
 protected:
+
     /**
      * Pole wierzcholki, zawiera dane o wierzcholkach powierzchni.
      */

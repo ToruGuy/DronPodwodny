@@ -5,6 +5,6 @@
 
 class Pret:public Przeszkoda{
 public:
-    Pret();
+    Pret(Wektor3D& wekPrzesuniecia);
 };
 #endif

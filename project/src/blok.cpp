@@ -1,5 +1,5 @@
 #include "blok.hh"
-Blok::Blok(){
+Blok::Blok(Wektor3D& wekPrzesuniecia){
     Wektor3D tmp;
     int i = 0;
 
@@ -8,6 +8,7 @@ Blok::Blok(){
 
     while(!Strm.eof()){
         Strm>>tmp;
+        tmp = tmp + wekPrzesuniecia;
         i++;
 
         _wierzcholki.push_back(tmp);

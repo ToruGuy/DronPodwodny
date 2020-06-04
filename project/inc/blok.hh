@@ -5,6 +5,6 @@
 
 class Blok:public Przeszkoda{
 public:
-    Blok();
+    Blok(Wektor3D& wekPrzesuniecia);
 };
 #endif

@@ -3,11 +3,11 @@
 Dron::Dron(){
     int licznik;
     //Przesuniecie wirniki do drona
-    Wektor3D tmp = Wektor3D(-5,0,-40); 
+    Wektor3D tmp = Wektor3D(-5,-5,-40); 
     wirnikLewy = Wirnik(tmp);
 
     //Przesuniecie wirniki do drona
-    tmp = Wektor3D(5,0,-40);
+    tmp = Wektor3D(5,-5,-40);
     wirnikPrawy = Wirnik(tmp);
 
     licznik = prostopadloscian.ilosc();
@@ -115,6 +115,54 @@ void Dron::ruchNaWprost(const double& katGoraDol, const double& odleglosc){
     }
 }
 
+void Dron::kolizjaObiekt(Wektor3D& zPoczatekOb, Wektor3D& zKoniecOb){
+    int licznik = 0;
+    //dla x                                                                                                                                                                                                 5 -5 -30 koniec    -5 5 40 poczatek                             
+    if((zPoczatekOb(0)<= this->zakresKonca()(0) && this->zakresPoczatku()(0) <= zKoniecOb(0)) || (zPoczatekOb(0)<= this->zakresPoczatku()(0) && this->zakresKonca()(0) <= zKoniecOb(0))||\
+    ((zPoczatekOb(0)<= (*this)[6](0) && (*this)[14](0) <= zKoniecOb(0)) || (zPoczatekOb(0)<= (*this)[14](0) && (*this)[6](0) <= zKoniecOb(0)))){
+        licznik++;
+        //std::cout<<"X"<<std::endl;
+    }
+    //dla y
+    if((zPoczatekOb(1)<= this->zakresKonca()(1) && this->zakresPoczatku()(1) <= zKoniecOb(1)) || (zPoczatekOb(1)<= this->zakresPoczatku()(1) && this->zakresKonca()(1) <= zKoniecOb(1)) ||\
+    ( (zPoczatekOb(1)<= (*this)[6](1) && (*this)[14](1) <= zKoniecOb(1)) || (zPoczatekOb(1)<= (*this)[14](1) && (*this)[6](1) <= zKoniecOb(1))) ){
+        licznik++;
+        //std::cout<<"Y"<<std::endl;
+    }
+    //dla z
+    if((zPoczatekOb(2)<= this->zakresKonca()(2) && this->zakresPoczatku()(2) <= zKoniecOb(2)) || (zPoczatekOb(2)<= this->zakresPoczatku()(2) && this->zakresKonca()(2) <= zKoniecOb(2)) ||\
+    ( (zPoczatekOb(2)<= (*this)[6](2) && (*this)[14](2) <= zKoniecOb(2)) || (zPoczatekOb(2)<= (*this)[14](2) && (*this)[6](2) <= zKoniecOb(2)))){
+        licznik++;
+        //std::cout<<"Z"<<std::endl;
+    }
+    if(licznik == 3){
+        std::cout<<"kolizja!"<<std::endl;
+    }
+    std::cout<<std::endl;
+    
+    
+    /*if(((*this).zakresKonca() <= zKoniecOb && (*this).zakresKonca() >= zPoczatekOb)||((*this).zakresPoczatku() <= zKoniecOb && (*this).zakresPoczatku() >= zPoczatekOb)){
+        std::cout<<"Kolizja!"<<std::endl;
+    }
+    for(Wektor3D& elem: _ukladGlobalny){
+        if(elem <= zKoniecOb && elem >= zPoczatekOb){
+            std::cout<<"Kolizja!"<<std::endl;
+        }
+    }
+    
+    if(wek <= (*this).zakresKonca() && wek >= (*this).zakresPoczatku()){
+        std::cout<<"Kolizja!"<<std::endl;
+    }
+    for(int i = 0; i < (*this).ilosc(); i++){
+        if(wek <= (*this)[i] && wek >= (*this).zakresPoczatku()){
+            std::cout<<"Kolizja!"<<std::endl;
+        }
+    }*/
+    //std::cout<<(*this).zakresPoczatku()<<std::endl;
+    //std::cout<<wek<<std::endl;
+    //std::cout<<(*this).zakresKonca()<<std::endl<<std::endl;
+}
+
 bool Dron::wykrywanieKolizjiZDnem(){
     double poziomDrona = POZ_WODY + 1; 
 
@@ -145,6 +193,30 @@ bool Dron::wykrywanieKolizjiZWoda(){
         return true;
     }
     return false;
+}
+
+Wektor3D Dron::zakresPoczatku() {
+    Wektor3D min = _ukladGlobalny[0];
+
+    for(const Wektor3D elem : _ukladGlobalny){
+        if(elem <= min){
+            min = elem;
+        }
+    }
+
+    return min;
+}
+
+Wektor3D Dron::zakresKonca() {
+    Wektor3D maxx = _ukladGlobalny[0];
+
+    for(const Wektor3D elem : _ukladGlobalny){
+        if(elem >= maxx){
+            maxx = elem;
+        }
+    }
+
+    return maxx;
 }
 
 std::string Dron::generujDronaDoPliku(){

@@ -11,7 +11,7 @@
  * Klasa modeluje pojecie drona, jako prostopadloscianu,
  * poruszajacego sie w ukladzie wspolrzednych.
  */
-class Dron{
+class Dron:public Prostopadloscian{
     Prostopadloscian prostopadloscian;
 
     Wirnik wirnikLewy;
@@ -40,8 +40,6 @@ public:
      */
     Dron();
 
-    //~Dron(){delete prostopadloscian;}
-
     /**
      * Przeciazenie operatora umozliwiajace wyswietlanie wartosci ukladu globalnego.
      * 
@@ -66,6 +64,8 @@ public:
      */
     void ruchNaWprost(const double& katGoraDol, const double& odleglosc);
 
+    void kolizjaObiekt(Wektor3D& zPoczatekOb, Wektor3D& zKoniecOb);
+
     /**
      * Wykrywa kolizje z dnem, jesli takowa nastapi zwraca true.
      * 
@@ -79,6 +79,10 @@ public:
      * @return bool
      */
     bool wykrywanieKolizjiZWoda();
+
+    Wektor3D zakresPoczatku();
+    
+    Wektor3D zakresKonca();
 
     /**
      * Generuje dane o dronie do pliku.
