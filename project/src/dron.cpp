@@ -120,20 +120,20 @@ bool Dron::kolizjaObiekt(Wektor3D& zPoczatekOb, Wektor3D& zKoniecOb){
     //(*this)[5](0) - (*this)[14](0) pierwsza przekatna
     //(*this)[6](0) - (*this)[13](0) druga przekatna
     //dla x                                                                                                                                                                                                 5 -5 -30 koniec    -5 5 40 poczatek                             
-    if((zPoczatekOb(0)<= (*this)[6](0) && (*this)[13](0) <= zKoniecOb(0)) || (zPoczatekOb(0)<= (*this)[13](0) && (*this)[6](0) <= zKoniecOb(0))||\
-    ((zPoczatekOb(0)<= (*this)[5](0) && (*this)[14](0) <= zKoniecOb(0)) || (zPoczatekOb(0)<= (*this)[14](0) && (*this)[5](0) <= zKoniecOb(0)))){
+    if((zPoczatekOb(0)<= (*this)[6](0) && (*this)[13](0)-5 <= zKoniecOb(0)) || (zPoczatekOb(0)<= (*this)[13](0)-5 && (*this)[6](0) <= zKoniecOb(0))||\
+    ((zPoczatekOb(0)<= (*this)[5](0) && (*this)[14](0)-5 <= zKoniecOb(0)) || (zPoczatekOb(0)<= (*this)[14](0)-5 && (*this)[5](0) <= zKoniecOb(0)))){
         licznik++;
         //std::cout<<"X"<<std::endl;
     }
     //dla y
-    if((zPoczatekOb(1)<= (*this)[6](1) && (*this)[13](1) <= zKoniecOb(1)) || (zPoczatekOb(1)<= (*this)[13](1) && (*this)[6](1) <= zKoniecOb(1)) ||\
-    ( (zPoczatekOb(1)<= (*this)[5](1) && (*this)[14](1) <= zKoniecOb(1)) || (zPoczatekOb(1)<= (*this)[14](1) && (*this)[5](1) <= zKoniecOb(1))) ){
+    if((zPoczatekOb(1)<= (*this)[6](1) && (*this)[13](1)-5 <= zKoniecOb(1)) || (zPoczatekOb(1)<= (*this)[13](1)-5 && (*this)[6](1) <= zKoniecOb(1)) ||\
+    ( (zPoczatekOb(1)<= (*this)[5](1) && (*this)[14](1)-5 <= zKoniecOb(1)) || (zPoczatekOb(1)<= (*this)[14](1)-5 && (*this)[5](1) <= zKoniecOb(1))) ){
         licznik++;
         //std::cout<<"Y"<<std::endl;
     }
     //dla z
-    if((zPoczatekOb(2)<= (*this)[6](2) && (*this)[13](2) <= zKoniecOb(2)) || (zPoczatekOb(2)<= (*this)[13](2) && (*this)[6](2) <= zKoniecOb(2)) ||\
-    ( (zPoczatekOb(2)<= (*this)[5](2) && (*this)[14](2) <= zKoniecOb(2)) || (zPoczatekOb(2)<= (*this)[14](2) && (*this)[5](2) <= zKoniecOb(2)))){
+    if((zPoczatekOb(2)<= (*this)[6](2) && (*this)[13](2)-5 <= zKoniecOb(2)) || (zPoczatekOb(2)<= (*this)[13](2)-5 && (*this)[6](2) <= zKoniecOb(2)) ||\
+    ( (zPoczatekOb(2)<= (*this)[5](2) && (*this)[14](2)-5 <= zKoniecOb(2)) || (zPoczatekOb(2)<= (*this)[14](2)-5 && (*this)[5](2) <= zKoniecOb(2)))){
         licznik++;
         //std::cout<<"Z"<<std::endl;
     }
@@ -163,7 +163,7 @@ bool Dron::wykrywanieKolizjiZWoda(){
     }
 
     if(poziomDrona >= POZ_WODY){
-        std::cerr<<"Jesteś na maksymalnie wynurzony!"<<std::endl<<std::endl;
+        std::cerr<<"Jesteś maksymalnie wynurzony!"<<std::endl<<std::endl;
         
         for(Wektor3D& elem : _ukladGlobalny){
             elem(2) -= JEDNOSTKOWA;

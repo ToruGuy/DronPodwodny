@@ -11,6 +11,8 @@
 #include <fstream>
 #include <cstdlib>
 #include <list>
+#include <stdlib.h>
+#include <time.h> 
 
 /**
  * Klasa laczy obiekty graficzne otaczajace drona.

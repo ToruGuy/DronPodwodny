@@ -18,6 +18,11 @@ bool otworzMenu(){
     Lacze.ZmienTrybRys(PzG::TR_3D);
     Lacze.Inicjalizuj();  // Tutaj startuje gnuplot.
 
+    //wyswietla drona oraz scene w momencie wlaczenia programu
+    (*scena).droN().generujDronaDoPliku();
+    (*scena).aktualizujScene(*po, *ko);
+    obslugaGNUplota(*po, *ko, Lacze);
+
     while(wpisanyZnak != 'k'){
         przemJednostkowe = JEDNOSTKOWA;
         std::cout<<"Twoj wybor, m - menu > ";

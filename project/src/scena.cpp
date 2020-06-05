@@ -17,6 +17,8 @@ Scena::Scena(Wektor3D& zakresP, Wektor3D& zakresK){
 }
 
 void Scena::aktualizujScene(Wektor3D& zakresP, Wektor3D& zakresK){
+    int liczbaPrzeszkod = przeszkody.size();
+    Wektor3D tmp;
     zakresP = dron[0]; zakresK = dron[0];
     
     //zakresy za oraz przed dronem
@@ -32,6 +34,12 @@ void Scena::aktualizujScene(Wektor3D& zakresP, Wektor3D& zakresK){
     przeszkody.remove_if([zakresK, zakresP](Przeszkoda elem){
         return (elem.zakresPoczatku()(0) > zakresK(0) || elem.zakresKonca()(0) < zakresP(0)) ||\
                 elem.zakresPoczatku()(1) > zakresK(1) || elem.zakresKonca()(1) < zakresP(1); });
+    
+    for(int i = 0; i < liczbaPrzeszkod - int(przeszkody.size()); i++){
+        tmp = Wektor3D(zakresK(0)-rand()%100+2, zakresP(1)+rand()%100+2, rand()%35+2);
+        std::shared_ptr<Blok> blok = std::make_shared<Blok>(tmp);
+        przeszkody.push_back((*blok));
+    }
 
     this->generujSceneDoPliku();
 }
