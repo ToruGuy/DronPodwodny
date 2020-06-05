@@ -4,13 +4,13 @@
 #include "powierzchnia.hh"
 
 /**
- * Klasa jest figura geometryczna a dokladniej prostopadloscianem.
+ * Klasa modelujaca pojecie prostopadloscianu.
  */
 class Prostopadloscian:public Powierzchnia{
 
 public:
     /**
-     * Kreator prostopadloscianu, podczas tworzenia pobiera dane
+     * Konstruktor prostopadloscianu, podczas tworzenia pobiera dane
      * o nim z pliku przypisanym do stalej PROSTOPADLOSCIAN.
      */
     Prostopadloscian();

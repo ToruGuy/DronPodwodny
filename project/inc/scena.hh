@@ -26,8 +26,14 @@ class Scena{
      */
     Woda *woda;
 
+    /**
+     * Pole zawierajace drona.
+     */
     Dron dron;
 
+    /**
+     * Pole zawierajaca liste przeskod.
+     */
     std::list<Przeszkoda> przeszkody;
     /**
      * Pole zawierajace string utworzonej sceny.
@@ -48,9 +54,15 @@ public:
      */
     ~Scena(){delete woda; delete dno; }
 
+    /**
+     * Metoda pozwalajaca na dostep do drona
+     */
     Dron& droN(){return dron;}
 
-    std::list<Przeszkoda>& listaPrzeszkod(){return przeszkody;}
+    /**
+     * Metoda pozwalajaca na dostep do przeszkod
+     */
+    std::list<Przeszkoda>& listaPrzeszkod() {return przeszkody;}
 
     void aktualizujScene(Wektor3D& zakresP, Wektor3D& zakresK);
 

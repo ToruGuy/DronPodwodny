@@ -4,17 +4,22 @@
 #include "powierzchnia.hh"
 
 /**
- * Klasa jest figura geometryczna a dokladniej prostopadloscianem.
+ * Klasa modelujaca pojecie graniastoslupu.
  */
 class Graniastoslup:public Powierzchnia{
 
 public:
     /**
-     * Kreator prostopadloscianu, podczas tworzenia pobiera dane
-     * o nim z pliku przypisanym do stalej PROSTOPADLOSCIAN.
+     * Konstruktor graniastoslupu, podczas tworzenia pobiera dane
+     * o nim z pliku przypisanym do stalej GRANIASTOSLUP.
      */
     Graniastoslup();
 
+    /**
+     * Konstruktor graniastoslupu ktory podczas tworzenia ma zostac przesuniety o wektor przemieszczenia
+     * 
+     * @param[in] - Wektro3D wektor przesuniecia wzgledem punktow podanych w pliku
+     */
     Graniastoslup(Wektor3D& wekPrzesuniecia);
 };
 #endif

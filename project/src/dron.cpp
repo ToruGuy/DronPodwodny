@@ -139,27 +139,6 @@ bool Dron::kolizjaObiekt(Wektor3D& zPoczatekOb, Wektor3D& zKoniecOb){
     }
     return licznik == 3;
     
-    
-    /*if(((*this).zakresKonca() <= zKoniecOb && (*this).zakresKonca() >= zPoczatekOb)||((*this).zakresPoczatku() <= zKoniecOb && (*this).zakresPoczatku() >= zPoczatekOb)){
-        std::cout<<"Kolizja!"<<std::endl;
-    }
-    for(Wektor3D& elem: _ukladGlobalny){
-        if(elem <= zKoniecOb && elem >= zPoczatekOb){
-            std::cout<<"Kolizja!"<<std::endl;
-        }
-    }
-    
-    if(wek <= (*this).zakresKonca() && wek >= (*this).zakresPoczatku()){
-        std::cout<<"Kolizja!"<<std::endl;
-    }
-    for(int i = 0; i < (*this).ilosc(); i++){
-        if(wek <= (*this)[i] && wek >= (*this).zakresPoczatku()){
-            std::cout<<"Kolizja!"<<std::endl;
-        }
-    }*/
-    //std::cout<<(*this).zakresPoczatku()<<std::endl;
-    //std::cout<<wek<<std::endl;
-    //std::cout<<(*this).zakresKonca()<<std::endl<<std::endl;
 }
 
 bool Dron::wykrywanieKolizjiZDnem(){
@@ -192,30 +171,6 @@ bool Dron::wykrywanieKolizjiZWoda(){
         return true;
     }
     return false;
-}
-
-Wektor3D Dron::zakresPoczatku() {
-    Wektor3D min = _ukladGlobalny[0];
-
-    for(const Wektor3D elem : _ukladGlobalny){
-        if(elem <= min){
-            min = elem;
-        }
-    }
-
-    return min;
-}
-
-Wektor3D Dron::zakresKonca() {
-    Wektor3D maxx = _ukladGlobalny[0];
-
-    for(const Wektor3D elem : _ukladGlobalny){
-        if(elem >= maxx){
-            maxx = elem;
-        }
-    }
-
-    return maxx;
 }
 
 std::string Dron::generujDronaDoPliku(){

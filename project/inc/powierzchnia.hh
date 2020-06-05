@@ -11,8 +11,6 @@
  * Jest to najmniejszy element graficzny. 
  */
 class Powierzchnia{
-    Wektor3D zPoczatku;
-    Wektor3D zKonca;
 protected:
 
     /**
@@ -20,7 +18,7 @@ protected:
      */
     std::vector <Wektor3D> _wierzcholki;
     /**
-     * Pole wierzcholki, zawiera dane o wierzcholkach powierzchni w formie gotowej do wypisania.
+     * Pole napis, zawiera dane o wierzcholkach powierzchni w formie gotowej do wypisania.
      */
     std::string _napis = "";
 
