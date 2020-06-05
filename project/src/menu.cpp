@@ -18,7 +18,7 @@ bool otworzMenu(){
     Lacze.ZmienTrybRys(PzG::TR_3D);
     Lacze.Inicjalizuj();  // Tutaj startuje gnuplot.
 
-    //wyswietla drona oraz scene w momencie wlaczenia programu
+    //wyswietla drona oraz scene w momencie wlaczenia
     (*scena).droN().generujDronaDoPliku();
     (*scena).aktualizujScene(*po, *ko);
     obslugaGNUplota(*po, *ko, Lacze);
@@ -76,6 +76,23 @@ bool otworzMenu(){
             
             if(!kolizja){
                 for(int i = 0; i < odleglosc; i++){
+                    if(i % 20 == 0){
+                        kolizja = false;
+                        for(int i = 0; i < ZAKRESOWA; i++){
+                            (*scena).droN().ruchNaWprost(katGoraDol, przemJednostkowe);
+                            
+                            for(Przeszkoda& elem : (*scena).listaPrzeszkod()){
+                                if((*scena).droN().kolizjaObiekt(elem.zakresPoczatku(), elem.zakresKonca())){
+                                    kolizja = true;
+                                    break;
+                                }
+                            }
+                        }(*scena).droN().ruchNaWprost(katGoraDol, -ZAKRESOWA);
+                    }if(kolizja == true){
+                        std::cout<<"Dron zostal zatrzymany ze wzgledu na zblizajaca sie kolizje!"<<std::endl;
+                        std::cout<<"Zadaj nowy ruch."<<std::endl;
+                        break;
+                    }
                     (*scena).droN().ruchNaWprost(katGoraDol, przemJednostkowe);
                     (*scena).droN().generujDronaDoPliku();
 

@@ -1,29 +1,44 @@
 #include "scena.hh"
 Scena::Scena(Wektor3D& zakresP, Wektor3D& zakresK){
+    int li;
+    int randNum[3];
     woda = new Woda(zakresP, zakresK);
     dno = new Dno(zakresP, zakresK); 
     Wektor3D tmp = Wektor3D(7,20,0); 
-    
-    std::shared_ptr<Blok> blok = std::make_shared<Blok>(tmp);
-    przeszkody.push_back((*blok));
-    
-    tmp = Wektor3D(-10,15,0);
-    std::shared_ptr<Sciana> sciana = std::make_shared<Sciana>(tmp);
-    przeszkody.push_back((*sciana));
 
-    tmp = Wektor3D(-5,-20,0);
-    std::shared_ptr<Pret> pret = std::make_shared<Pret>(tmp);
-    przeszkody.push_back((*pret));
+    for(int i = 0; i < ILOSCPRZESZKOD; i++){
+        li = rand()%3+1;
+        for(int i = 0; i < 2; i++){
+            randNum[i] = rand()%int(zakresK(i))+int(zakresP(i));
+            while(randNum[i] < zakresP(i) + ZAKRESOWA - 15 &&  randNum[i] > zakresK(i) - ZAKRESOWA + 15){
+                randNum[i] = rand()%int(zakresK(i))+int(zakresP(i));
+            }
+        }
+        if(li == 2){
+            tmp = Wektor3D(randNum[0], randNum[1], rand()%35+2);
+            std::shared_ptr<Blok> blok = std::make_shared<Blok>(tmp);
+            przeszkody.push_back((*blok));
+        }else if(li == 1){
+            tmp = Wektor3D(randNum[0], randNum[1], rand()%35+2);
+            std::shared_ptr<Sciana> sciana = std::make_shared<Sciana>(tmp);
+            przeszkody.push_back((*sciana));
+        }else{
+            tmp = Wektor3D(randNum[0], randNum[1], rand()%35+2);
+            std::shared_ptr<Pret> pret = std::make_shared<Pret>(tmp);
+            przeszkody.push_back((*pret));
+        }   
+    }
 }
 
 void Scena::aktualizujScene(Wektor3D& zakresP, Wektor3D& zakresK){
-    int liczbaPrzeszkod = przeszkody.size();
+    int li;
+    int randNum[3];
     Wektor3D tmp;
     zakresP = dron[0]; zakresK = dron[0];
     
     //zakresy za oraz przed dronem
-    zakresP(0) -= 70; zakresP(1) -= 70;
-    zakresK(0) += 70; zakresK(1) += 70;
+    zakresP(0) -= ZAKRESOWA; zakresP(1) -= ZAKRESOWA;
+    zakresK(0) += ZAKRESOWA; zakresK(1) += ZAKRESOWA;
 
     delete woda;
     delete dno;
@@ -35,10 +50,28 @@ void Scena::aktualizujScene(Wektor3D& zakresP, Wektor3D& zakresK){
         return (elem.zakresPoczatku()(0) > zakresK(0) || elem.zakresKonca()(0) < zakresP(0)) ||\
                 elem.zakresPoczatku()(1) > zakresK(1) || elem.zakresKonca()(1) < zakresP(1); });
     
-    for(int i = 0; i < liczbaPrzeszkod - int(przeszkody.size()); i++){
-        tmp = Wektor3D(zakresK(0)-rand()%100+2, zakresP(1)+rand()%100+2, rand()%35+2);
-        std::shared_ptr<Blok> blok = std::make_shared<Blok>(tmp);
-        przeszkody.push_back((*blok));
+    for(int i = 0; i < ILOSCPRZESZKOD - int(przeszkody.size()); i++){
+        li = rand()%3+1;
+        for(int i = 0; i < 2; i++){
+            randNum[i] = rand()%int(zakresK(i))+int(zakresP(i));
+            while(randNum[i] < zakresP(i) + ZAKRESOWA - 15 &&  randNum[i] > zakresK(i) - ZAKRESOWA + 15){
+                randNum[i] = rand()%int(zakresK(i))+int(zakresP(i));
+            }
+        }
+        if(li == 2){
+            tmp = Wektor3D(randNum[0], randNum[1], rand()%35+2);
+            std::shared_ptr<Blok> blok = std::make_shared<Blok>(tmp);
+            przeszkody.push_back((*blok));
+        }else if(li == 1){
+            tmp = Wektor3D(randNum[0], randNum[1], rand()%35+2);
+            std::shared_ptr<Sciana> sciana = std::make_shared<Sciana>(tmp);
+            przeszkody.push_back((*sciana));
+        }else{
+            tmp = Wektor3D(randNum[0], randNum[1], rand()%35+2);
+            std::shared_ptr<Pret> pret = std::make_shared<Pret>(tmp);
+            przeszkody.push_back((*pret));
+        }
+        
     }
 
     this->generujSceneDoPliku();
