@@ -15,6 +15,7 @@ Scena::Scena(Wektor3D& zakresP, Wektor3D& zakresK){
     std::shared_ptr<Pret> pret = std::make_shared<Pret>(tmp);
     przeszkody.push_back((*pret));
 }
+
 void Scena::aktualizujScene(Wektor3D& zakresP, Wektor3D& zakresK){
     zakresP = dron[0]; zakresK = dron[0];
     
@@ -27,6 +28,10 @@ void Scena::aktualizujScene(Wektor3D& zakresP, Wektor3D& zakresK){
 
     this->woda = new Woda(zakresP, zakresK);
     this->dno = new Dno(zakresP, zakresK);
+
+    przeszkody.remove_if([zakresK, zakresP](Przeszkoda elem){
+        return (elem.zakresPoczatku()(0) > zakresK(0) || elem.zakresKonca()(0) < zakresP(0)) ||\
+                elem.zakresPoczatku()(1) > zakresK(1) || elem.zakresKonca()(1) < zakresP(1); });
 
     this->generujSceneDoPliku();
 }

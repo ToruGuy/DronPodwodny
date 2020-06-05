@@ -88,7 +88,7 @@ bool otworzMenu(){
 
                     (*scena).aktualizujScene(*po, *ko);
                     obslugaGNUplota(*po, *ko, Lacze);
-                    usleep(SLEEP);
+                    usleep(SLEEP/4);
                 }
             }else{
                 std::cout<<"Podczas zadanej drogi nastapilaby kolizja!"<<std::endl;
@@ -129,7 +129,7 @@ bool otworzMenu(){
                 
                     (*scena).aktualizujScene(*po, *ko);
                     obslugaGNUplota(*po, *ko, Lacze);
-                    usleep(SLEEP);
+                    usleep(SLEEP/4);
                 }
             }else{
                 if(obrot >= PELNYOBROT){
@@ -146,7 +146,7 @@ bool otworzMenu(){
 
                     (*scena).aktualizujScene(*po, *ko);
                     obslugaGNUplota(*po, *ko, Lacze);
-                    usleep(SLEEP);
+                    usleep(SLEEP/4);
                 }
             }
             
