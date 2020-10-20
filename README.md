@@ -1,6 +1,7 @@
 # Dron Podwodny - Underwater Drone
 
 The program gives you ability to steer underwater drone!
+Made by Tomasz Pijanowski.
 
 Program written in C++, graphical interpretation uses GNUplot.
 More information about GNUplot:
