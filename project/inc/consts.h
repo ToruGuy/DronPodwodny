@@ -16,7 +16,7 @@
 #define OBLEWYW -20
 #define OBRPRAWYW 20
 #define ZAKRESOWA 70
-#define ILOSCPRZESZKOD 7
+#define ILOSCPRZESZKOD 3
 
 
 #define PROSTOPADLOSCIAN "bryly/prostopadloscian.dat"
